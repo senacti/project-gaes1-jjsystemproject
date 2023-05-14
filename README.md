@@ -43,18 +43,18 @@ Manejar los procesos de gestión de entrega de productos que ya han sido solicit
 ## Módulo 4 - PQRSF. 📮👧🏽🧑🏽
 Evaluar los servicios y productos brindados por la empresa mediante formularios que permitan conocer las inquietudes e inconformidades del cliente por medio de la creación de peticiones, quejas y reclamos, además permitiendo al usuario comunicar su conformidad con la empresa a través de felicitaciones y sugerencias y realizando calificaciones a los envíos realizados, obteniendo respuestas y soluciones por parte del administrador. Facilitar la toma de decisiones de la empresa para mejorar el nivel de satisfacción de los clientes, e implementar mejoras para la calidad del servicio.
 
-# Objetivos Especificos
-## Servicios y ventas:
+# Objetivos Especificos 📍📊
+## 📷📡💡 Servicios y ventas:
 Registrar los productos y servicios brindados por la empresa así como los pedidos realizados de dichos productos y servicios.
-## Servicio Tecnico:
+## 📑🔦🚨Servicio Tecnico:
 Optimizar la administración de citas de mantenimiento, análisis e instalación, de acuerdo con el sistema de agendamiento.
-## Envios:
+## 📨📦📝Envios:
 Organizar los procesos de logística para los envíos y entregas de productos de seguridad electrónica.
-## PQRSF:
+## 📰❗🙋🏽‍♂️🙋🏽‍♀️ PQRSF:
 Gestionar respuestas y soluciones de forma eficaz al cliente mediante el sistema de peticiones, quejas, reclamos, sugerencias y felicitaciones, adaptando mejoras para la calidad del servicio.
 
 ## Tipo de recoleccion de datos
 Se hace uso de la técnica cualitativa “entrevista”, la cual nos permite realizar la recolección detallada de datos de la empresa para el sistema de información a través de una interacción sincrónica.
-
+🎤🎬👩🏼‍💻👩🏾‍💻👨🏻‍💻
 ## Justificacion
 Este software que se ofrece a la empresa JJ System (empresa de seguridad electrónica) es necesario para establecer tiempos más cortos en los procesos y a su vez ayudar a llegar a más personas con una interfaz amigable mediante una aplicación web. Este sistema tiene como fin potenciar las ventas de la empresa y contribuir en el mejoramiento de la industria tecnológica brindando procesos que aporten a la seguridad electrónica.
