@@ -11,7 +11,7 @@ El cliente realiza el llamado al teléfono al técnico para cotizar y si llegan 
 La empresa cuenta con su cámara de comercio actualizada hasta la fecha.
 ## Importacion de productos, tiempo de arribo:
 La empresa cuenta con su cámara de comercio actualizada hasta la fecha.
-## Osilacion de precio de stock
+## Oscilacion de precio de stock
 No manejan stock lo maneja su proveedor. 📌
 ## Formas de pago
 Efectivo 💵
