@@ -1,0 +1,97 @@
+Etiquetas de importancia texto en html
+- em
+- strong
+- small
+- br
+- wbr/salto de linea si hace falta
+- time /cont fecha hora
+Etiqueta estilo en html
+- i 
+- b
+- u
+
+Listas
+ul
+ol
+dl-difiniciones o diccionario (dt termino, dd descripcion del termino )
+
+Construir estructura basica 
+- etqueta: table
+- etiqueta: caption (titulo de tabla)
+- thead: cabecera
+- tbody: se pone obligatoriamente si se usa thead.
+- th: celdas de la cabecera
+- tr: construye fila (table row)
+- td: table data, construye celdas
+- tfood: pie de tabla(opcional)
+
+ocupar mas de una fila y columna 
+- rowspan
+- colspan
+
+Etiquetas de bloque
+- addres (aporta informacion de contacto para el body o articulo)
+- blockquote (marcar citas de autores o doctms), cite (poner enlace al docmnt(no redirige, solo para el navgdr))
+- pre (representa texto tal y como se escribio en el codigo)
+- hr (le informa al navgdr que se cambio de tema)
+
+Etiqueta de linea
+- span: pequeños textos o palabras, las agrupa para dar estilo
+- q : poner citas en linea
+- code : codigo que se representa en la pagina
+
+---------------CREACION DE FORMULARIOS---------------
+
+Estructura:
+- form : atributo action; ruta a la que se envia el formulario
+- label : nombre del formulario o campo a rellenar
+- input type:
++button
+-----fechas
+ date
+ submit
+ datetime-local(no firefox)
+ time
+ mont
+ week
+----otros
+ tel
+ search
+ email
+ password(no es seguro)
+ url
+ color
+ number
+ range; atributo step, max, min
+ reset
+ text 
+----------Seleccionables
+ radio:unica opcion; atributo; name, checked(por defecto), value
+ checkbox: seleccion multiple; atributo; name,checked,value
+ option: atributo;value. atributo;multiple.
+ coptgroup: ordenar categorias. atributo;label(agregar nombre de categoria)
+ datalist: opcion con descripcion.
+
+ -----MAS ELEMENTOS DE UN FORMULARIO--------
+ fieldset: agrupa elementos
+ legend: etiqueta para poner un nombre al fieldset
+ file: (input) cargar archivos 
+ meter: representa un valor en una barra de progreso, atributo low, high, optimun (cambian colores)
+ textarea: define area visible cols= ancho row= alto
+
+----- ATRIBUTOS------------
+ progress: progreso de una tarea
+ placeholder: texto en un input para dar una instruccion
+ required: obligatoriamente debe llenar el campo
+ minlength
+ maxlength 
+ autofocus
+ for : identificador de label
+
+--------ENVIAR FORMULARIOS java y html -----
+GET: metodo por defecto, los datos enviados se ven en la url
+POST: enviar formulario "por atras de la pagina", los datos enviados se ven en consola.
+enctype: el tipo de codificacion (convertir espacios en blanco en +)
+
+
+ 
