@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@font-face 
+{src: url(../fonts/Berlin-sans-serif.ttf);
+font-family: 'Berlin';
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing:border-box;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    text-decoration: none;
+    height: 100%;
+}
+
+.menu {
+    display: flex;
+}
+
+nav {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    background-color: #132E43;
+    text-decoration: none;
+    display: flex;
+    width: 20%;
+}
+
+ul {
+    height: 10%;
+    text-decoration: none;
+    list-style: none;
+    position: relative;
+    top: 25%;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #fff;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    border-radius: 40px;
+    height: 55%;
+}
+
+a:hover {
+    background-color:  #018ABE;
+    cursor: pointer;
+}
+
+ul li h1 {
+    font-family: 'Berlin';
+    color: #fff;
+    bottom: 55%;
+    position: relative;
+    left: 15%;
+}
+
+.encabezado {
+    display: flex;
+    height: 3%;
+    align-content: center;
+    justify-content:space-between;
+    position: relative;
+    bottom: 100%;
+    padding-left: 20%;
+}
+
+.encabezado .saludo {
+    line-height: 20px;
+    padding: 2%;
+}
+
+.encabezado .saludo p{
+    font-weight: bold;
+    color:#018ABE;
+}
+
+.encabezado .saludo i {
+    color: #000;
+}
+
+.encabezado .perfil {
+    line-height: 20px;
+    padding: 2%;
+    display: flex;
+}
+
+.encabezado .perfil i {
+    font-size: 40px;
+    padding-right: 20px;
+}
+
+.encabezado .perfil a{
+    color: #000;
+}
+
+.opciones {
+    display: flex;
+    height: 24%;
+    width: 40%;
+    bottom: 88%;
+    position: relative;
+    justify-content:center;
+    color: #fff;
+    left: 20%;
+    font-size: 80%;
+}
+
+.opciones .envios {
+    background-color: #5174F2;
+    width: 25%;
+    margin-right: 5%;
+    border-radius: 5%;
+    padding-top: 14%;
+    padding-left: 2%;
+}
+
+.opciones .comprobantes {
+    background-color: #4CC94A;
+    width: 25%;
+    border-radius: 5%;
+    padding-top: 14%;
+    padding-left: 2%;
+    margin-right: 15%;
+}
+
+.envio {
+    display:flex;
+    height: 35%;
+    width: 70%;
+    bottom: 80%;
+    position: relative;
+    padding: 0%;
+    justify-content: start;
+    color: #000;
+    left: 25%;
+}
+
+.envio .target {
+    background-color: #D9D9D9;
+    width:35%;
+    height: 100%;
+    display: flex;
+    padding-left: 2%;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.envio .target .foto {
+    height: 70%;
+    width: 100%;
+    text-align: center;
+    font-size: 60%;
+    margin-right: 7%;
+}
+
+.envio .target .foto img{
+    width: 100%;
+    height: 75%;
+}
+
+.envio .target .foto p{
+    width: 110%;
+    height: 1%;
+}
+
+.envio .target .foto h6 {
+    font-weight: bold;
+    height: 3%;
+    width: 200%;
+    position: relative;
+    bottom: 40%;
+}
+
+.envio .target .info {
+    background-color: rgba(91, 135, 246, 0.7);
+    font-size: 90%;
+    border-radius: 20px;
+    padding: 5%;
+    width: 100%;
+    height: 85%;
+    margin-right: 5%;
+}
+
+.estado {
+    display: flex;
+    height: 5%;
+    width: 40%;
+    position: relative;
+    bottom: 75%;
+    justify-content: end;
+}
+
+.estado p {
+    position: relative;
+    bottom: 75%;
+    left: 13%;
+}
+
+.estado .estados {
+    display: flex;
+    width: 40%;
+    font-size: 50px;
+    padding-left: 20px;
+}
+
+.estado .estados i {
+    display: flex;
+}
+
+.estado .estados input {
+    display: flex;
+    position: relative;
+}
+
+.observacion {
+    width: 30%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content:end;
+    align-items: end;
+    position: relative;
+    bottom: 105%;
+    left: 42%;
+}
+
+.observacion textarea{
+    width: 70%;
+    border-radius: 3%;
+    padding: 1%;
+}
+
+.observacion h6 {
+    height: 20%;
+    color: #000;
+    font-weight: bold;
+    width: 70%;
+}
+
+.comprobante {
+    display: flex;
+    position: relative;
+    bottom: 181%;
+    height: 43%;
+    width: 25%;
+    left: 54%;
+}
+
+.comprobante .datos {
+    border: #000 solid 1px;
+    border-radius: 10% ;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 3%;
+}
+
+.comprobante .datos h6 {
+    height: 0;
+    position: relative;
+    font-weight: bold;
+    bottom: 13%;
+}
+
+.comprobante .datos i {
+    border: #000 solid 1px;
+    padding: 2%;
+    border-radius: 20px;
+    padding-right: 20%;
+}

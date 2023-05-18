@@ -1,0 +1,190 @@
+/*Estilo general*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@font-face 
+{src: url(../fonts/Berlin-sans-serif.ttf);
+font-family: 'Berlin';
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    Color: #263465;
+}
+/*Estilo del encabezado de la página*/
+
+.header{
+    background: #FFFFFF;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+    .header a {
+        color: #263465;
+        text-decoration: none;
+        padding: 2rem 0rem;
+    }
+
+.logo-login-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    font-family: 'Berlin';
+    font-size: 1.8em;
+    margin-left: 20%;
+}
+
+.login_navigation{
+    margin-right: 20%;
+}
+
+.login_navigation ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.login_navigation ul li{
+    font-weight: bold;
+    font-size: 1.3em;
+    display: inline-block;
+}
+
+    .login_navigation ul li a {
+        display: block;
+        padding: 0.5rem 1rem;
+        transition: all 0.4s linear;
+        border-radius: 5px;
+    }
+
+        .login_navigation ul li a:hover{
+            background: #D9D9D9;
+        }
+
+/*Estilo del contenido de la página (productos)*/
+
+img{
+    width: 30px;
+}
+
+.main{
+    margin-top: 7rem;
+}
+
+.product_container{
+    background: #D9D9D9;
+}
+
+.product_container h1{
+    padding-top: 2em;
+    text-align: center;
+}
+
+.product_container h2{
+    padding-top: 1.5em;
+    margin-left: 20%;
+}
+
+.most_required {
+    text-align: center;
+    margin-left: 20%;
+    margin-right: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.most_required a{
+    padding-top: 3em;
+    padding-bottom: 3em;
+    font-weight: bold;
+    color: #263465;
+    text-decoration: none;
+    padding: 2rem 0rem;
+}
+
+    .most_required a img{
+        width: 14rem;
+    }
+
+    .most_required a .big_sensor{
+        width: 9rem;
+    }
+
+.categories_container{
+    padding-top: 3em;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.categories_container h1{
+    text-align: center;
+}
+
+.categories_container h2{
+    padding: 2rem 0;
+}
+
+.category{
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    color: #263465;
+    text-decoration: none;
+    padding: 2rem 0rem;
+}
+
+    .category a{
+        text-decoration: none;
+    }
+
+    .category a img{
+        width: 10em;
+    }
+
+    .category a .dvr_sample_3{
+        margin: 0;
+        padding: 0;
+        width: 8em;
+    }
+
+    .category a .alarm_sample_2{
+        width: 18em;
+    }
+
+    .category a .sensor_sample_2{
+        width: 6.4em;
+    }
+
+    .category a .show_more{
+        padding: 1em;
+        transition: all 0.4s linear;
+        border-radius: 5px;
+    }
+
+    .category a .show_more:hover{
+        background: #D9D9D9;
+    }
+/*Estilo del pie de página de la página*/
+
+.footer {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: #2a3260;
+    color: #ffffff;
+    font-size:small;
+}
+
+.footer_container p a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
