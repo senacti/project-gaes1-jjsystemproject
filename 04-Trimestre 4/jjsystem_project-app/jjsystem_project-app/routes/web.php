@@ -21,4 +21,6 @@ Route::get('/venta_productos', function () {
     return view("venta_productos");
 });
 
-
+Route::get('/camaras', function () {
+    return view("camaras");
+});
