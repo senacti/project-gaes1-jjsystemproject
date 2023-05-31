@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@font-face 
+{src: url(../fonts/Berlin-sans-serif.ttf);
+font-family: 'Berlin';
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing:border-box;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    text-decoration: none;
+    height: 100%;
+}
+
+.menu {
+    display: flex;
+}
+
+nav {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    background-color: #132E43;
+    text-decoration: none;
+    display: flex;
+    width: 20%;
+}
+
+ul {
+    height: 10%;
+    text-decoration: none;
+    list-style: none;
+    position: relative;
+    top: 16%;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #fff;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    border-radius: 40px;
+    height: 55%;
+}
+
+ul li a:hover {
+    background-color:  #018ABE;
+    cursor: pointer;
+}
+
+ul li h1 {
+    font-family: 'Berlin';
+    color: #fff;
+    bottom: 55%;
+    position: relative;
+    left: 15%;
+}
+
+.encabezado {
+    display: flex;
+    height: 70%;
+    width: 80%;
+    left: 20%;
+    align-content: center;
+    justify-content:space-between;
+    position: relative;
+    bottom: 100%;
+}
+
+.encabezado .saludo {
+    line-height: 20px;
+    padding: 2%;
+}
+
+.encabezado .saludo p{
+    font-weight: bold;
+    color:#018ABE;
+}
+
+.encabezado .saludo i {
+    color: #000;
+}
+
+.encabezado .perfil {
+    position: relative;
+    right: 10%;
+    line-height: 20px;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.encabezado .perfil i {
+    font-size: 40px;
+    padding-right: 20px;
+}
+
+.encabezado .perfil a{
+    color: #000;
+}
+
+.opciones {
+    display: flex;
+    height: 24%;
+    width: 40%;
+    bottom: 150%;
+    position: relative;
+    justify-content:center;
+    color: #fff;
+    left: 20%;
+    font-size: 100%;
+}
+
+.opciones .envios {
+    background-color: #F28B51;
+    width: 25%;
+    margin-right: 10%;
+    border-radius: 5%;
+    padding-top: 17%;
+    padding-left: 2%;
+}
+
+.opciones .comprobantes {
+    background-color: #018ABE;
+    width: 30%;
+    border-radius: 5%;
+    padding-top: 17%;
+    padding-left: 2%;
+    margin-right: 15%;
+}
+
+.reciente {
+    display: flex;
+    height: 30%;
+    width: 50%;
+    position: relative;
+    bottom: 145%;
+    left: 25%;
+}
+
+.reciente .historial {
+    display: flex;
+    flex-direction: column;
+    line-height: 100%;
+    width: 60%;
+    height: 100%;
+}
+
+.reciente .historial h6 {
+    height: 24%;
+    font-weight: bold;
+}
+
+.reciente .historial h5 {
+    font-weight: bold;
+    padding-bottom: 3%;
+}
+
+.reciente .historial .envio1 {
+    border-top: #F145F5 solid 10px;
+    border-radius: 10px;
+    padding: 1%;
+    margin-bottom: 3%;
+    box-shadow: 0 5px 4px gray;
+}
+
+.reciente .historial .envio2 {
+    border-top: #F5C445 solid 10px;
+    border-radius: 10px;
+    padding: 1%;
+    box-shadow: 0 5px 4px gray;
+}
+
+.reciente .historial .envio3 {
+    border-top: #F54545 solid 10px;
+    border-radius: 10px;
+    padding: 1%;
+    margin-top: 3%;
+    box-shadow: 0 5px 4px gray;
+}

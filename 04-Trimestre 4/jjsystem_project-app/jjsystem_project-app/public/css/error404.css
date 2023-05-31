@@ -1,0 +1,40 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family:'montserrat', sans-serif ;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(217, 217, 217, 1) ,rgba(19, 46, 67, 1) );
+}
+.contenedor{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color:#343434
+}
+
+.contenedor h1{
+    font-size:160px;
+    margin:0;
+    font-weight: 900;
+    letter-spacing: 0px;
+    background: url(../images/camaraerror.png) center no-repeat;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.contenedor a{
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    display:inline-block;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+.contenedor a:hover{
+    background: #59D5CC;
+    color: #000;
+}
