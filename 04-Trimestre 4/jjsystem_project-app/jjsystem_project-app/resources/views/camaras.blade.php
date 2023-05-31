@@ -22,7 +22,7 @@
                 <ul>
                     <li><a href="../../HTML/formularios/registro.html">Registrarse</a></li>
                     <li><a href="../../HTML/formularios/login.html">Iniciar sesión</a></li>
-                    <li><a href="#"><img class="user_img" src="../../images/ft perfil.png" alt="Foto de perfil"></a></li>
+                    <li><a href="#"><img class="user_img" src="{{ asset('images/fotoperfil.png')}}" alt="Foto de perfil"></a></li>
                 </ul>
                 
             </nav>
