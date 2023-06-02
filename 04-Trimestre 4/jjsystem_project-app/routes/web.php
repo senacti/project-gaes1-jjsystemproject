@@ -36,11 +36,11 @@ Route::get('/registro',function(){
     return view("registro");
 });
 Route::get('/recuperarContraseña',function(){
-    return view("recuperar_contraseña");
+    return view("recuperarContraseña");
 });
 Route::get('/recuperarContraseña2',function(){
-    return view("recuperar_contraseña-paso2");
+    return view("recuperarContraseñaPaso2");
 });
 Route::get('/recuperarContraseña3',function(){
-    return view("recuperar_contraseña-paso3");
+    return view("recuperarContraseñaPaso3");
 });
