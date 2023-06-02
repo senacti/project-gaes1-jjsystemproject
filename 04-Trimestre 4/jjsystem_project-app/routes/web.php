@@ -39,8 +39,8 @@ Route::get('/recuperarContraseña',function(){
     return view("recuperar_contraseña");
 });
 Route::get('/recuperarContraseña2',function(){
-    return view("recuperar_contraseña");
+    return view("recuperar_contraseña-paso2");
 });
 Route::get('/recuperarContraseña3',function(){
-    return view("recuperar_contraseña");
+    return view("recuperar_contraseña-paso3");
 });
