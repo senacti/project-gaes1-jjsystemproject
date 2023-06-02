@@ -28,3 +28,19 @@ Route::get('/camaras', function () {
 Route::get('/envioscliente', function () {
     return view("EnviosCliente_dashboard");
 });
+
+Route::get('/login',function(){
+    return view("login");
+});
+Route::get('/registro',function(){
+    return view("registro");
+});
+Route::get('/recuperarContraseña',function(){
+    return view("recuperar_contraseña");
+});
+Route::get('/recuperarContraseña2',function(){
+    return view("recuperar_contraseña");
+});
+Route::get('/recuperarContraseña3',function(){
+    return view("recuperar_contraseña");
+});
