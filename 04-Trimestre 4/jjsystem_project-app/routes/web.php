@@ -24,3 +24,7 @@ Route::get('/venta_productos', function () {
 Route::get('/camaras', function () {
     return view("camaras");
 });
+
+Route::get('/envioscliente', function () {
+    return view("EnviosCliente_dashboard");
+});
