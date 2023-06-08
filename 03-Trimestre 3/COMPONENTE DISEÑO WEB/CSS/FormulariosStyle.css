@@ -9,8 +9,7 @@ body{
     height: 100vh;
     justify-content: center;
     align-items: center;
-    background: url(../images/fondoejemplo.png);
-    background-size:100%;
+   
 }
 #boton-login{
     width: 130px;
