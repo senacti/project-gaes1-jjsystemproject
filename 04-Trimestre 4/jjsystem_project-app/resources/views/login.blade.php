@@ -11,17 +11,17 @@
 <body>
 <Section class="contenedorPrincipal ">
     <div class = "contenedor-login" >
-      <h1 class="Titulo">Iniciar Sesion</h1>
-          <form action="">
+        <h1 class="Titulo">Iniciar Sesion</h1>
+            <form action="">
             <div class="icon-contenedor">
-              <img  src="../../images/FormulariosIMG/login.png" class="icon">
+                <img  src="../../images/FormulariosIMG/login.png" class="icon">
             </div>  
-              <div class="Datos">
+                <div class="Datos">
                 <div class="Input-datos-login">
-                  <label>Numero de Documento</label>
-                  <input type="number" class="input" required>
-                  <label>Contraseña</label>
-                  <input type="password" class="input" required>
+                    <label>Numero de Documento</label>
+                    <input type="number" class="input" required>
+                    <label>Contraseña</label>
+                    <input type="password" class="input" required>
                 </div>
                 <div class="botonC">
                     <input type="submit" value="Iniciar Sesion" id="iniciarSesion">
@@ -29,11 +29,11 @@
                 <div class="recuperar-contraseña">
                     <a id="recuperarContraseña" href="../formularios/recuperarcontraseña.html">Olvide mi contraseña</a></li>
                 </div>
-              </div>
+            </div>
         </form>
-      </div>
+    </div>
     
-  </section>
+</section>
     
 </body>
 </html>
