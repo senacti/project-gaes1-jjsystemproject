@@ -9,19 +9,22 @@
 </head>
 
 <body>
-<Section class="contenedorPrincipal ">
+<Section class="contenedorPrincipal">
+    <span class="icon-close">
+      <ion-icon name="close-outline"></ion-icon>
+    </span>
     <div class = "contenedor-login" >
-        <h1 class="Titulo">Iniciar Sesion</h1>
-            <form action="">
+      <h1 class="Titulo">Iniciar Sesion</h1>
+          <form action="">
             <div class="icon-contenedor">
-                <img  src="../../images/FormulariosIMG/login.png" class="icon">
+              <img  src="../../images/FormulariosIMG/login.png" class="icon">
             </div>  
-                <div class="Datos">
-                <div class="Input-datos-login">
-                    <label>Numero de Documento</label>
-                    <input type="number" class="input" required>
-                    <label>Contraseña</label>
-                    <input type="password" class="input" required>
+              <div class="Datos">
+                <div class="Input-datos-formularios">
+                  <label>Email</label>
+                  <input type="email" class="input" required  id="email">
+                  <label>Contraseña</label>
+                  <input type="password" class="input" required id="password">
                 </div>
                 <div class="botonC">
                     <input type="submit" value="Iniciar Sesion" id="iniciarSesion">
@@ -29,11 +32,13 @@
                 <div class="recuperar-contraseña">
                     <a id="recuperarContraseña" href="../formularios/recuperarcontraseña.html">Olvide mi contraseña</a></li>
                 </div>
-            </div>
+                <div class="login-registrar">
+                  <a id="registrar" href="#">Registrarse</a></li>
+              </div>
+              </div>
         </form>
-    </div>
-    
-</section>
+      </div>
+  </Section>
     
 </body>
 </html>
