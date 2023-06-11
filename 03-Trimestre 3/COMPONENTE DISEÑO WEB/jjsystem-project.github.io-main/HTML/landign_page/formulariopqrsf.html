@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario pqrsf - J.J System</title>
+    <link href="../../CSS/formulariopqrsf.css" rel="stylesheet">
+    <link href="../../CSS/normalize.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <header class="header">
+        
+        <div class="container logo-login-container">
+            
+            <a href="../../HTML/landign_page/Index.html" class="logo">J.J SYSTEM</a>
+            
+            <nav class="login_navigation">
+                <ul>
+                    <li><a href="../../HTML/formularios/registro.html">Registrarse</a></li>
+                    <li><a href="../../HTML/formularios/login.html">Iniciar sesión</a></li>
+                    <li><a href="#"><img class="user_img" src="../../images/ft perfil.png" alt="Foto de perfil"></a></li>
+                </ul>
+                
+            </nav>
+        
+        </div>
+        
+    </header>
+
+    <main class="main">
+
+        <nav class="navigation_bar">
+            
+            <div class="search_bar">
+
+                <nav class="navigation_bar_logo">
+                    <a href="#"><img class="navigation_img" src="../../images/lupa.png" alt="Lupa de navegación"></a>
+                </nav>
+                
+                <nav class="navigation_bar_search_box">
+                    <input type="text" class="navigation_bar_input" placeholder="buscar" required>
+                </nav>
+            
+            </div>
+
+            <nav class="navigation_bar_items">
+                
+                <ul>
+                    <li>
+                        <a href="#">Servicios</a>
+                    </li>
+                    
+                    <li>
+                        <a href="#">Sobre nosotros</a>
+                    </li>
+                    
+                    <li>
+                        <a href="#">Contactanos</a>
+                    </li>
+                </ul>
+            
+            </nav>
+        
+        </nav>
+
+        <div class="analysis_service">
+
+            <br><h1>PQRSF</h1>
+
+            <div class="pqrsf_description">
+
+                <p>Para nuestra empresa J.J System es muy importante conocer su opinión sobre nuestra prestación <br>
+                 de servicios para poder mejorarlos continuamente, por eso queremos invitarlos a que registren <br> 
+                 sus peticiones, quejas, reclamos, sugerencias y felicitaciones a través de este formulario,<br>
+                 diligenciando los datos requeridos para poder responderle oportunamente.</p>
+
+            </div>
+        
+        </div>
+
+        <br><div class="container">
+        <div class="first_form">
+
+            <form class="form" action="">
+
+              <label for="exampleDataList" class="form-label">1. Tipo de manifestación</label>
+              <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Elige una opción...">
+              <datalist id="datalistOptions">
+                  <option value="Petición">
+                  <option value="Queja">
+                  <option value="Reclamo">
+                  <option value="Sugerencia">
+                  <option value="Felicitación">
+              </datalist>
+      
+              <br><div class="mb-3">
+                  <label for="exampleFormControlTextarea1" class="form-label">2. Descripción de la manifestación <br>
+                       Si lo considera necesario, por favor especifique servicio, productos y/o personas involucradas.</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+      
+                <div class="mb-3">
+                  <label for="formFileMultiple" class="form-label">Subir archivo</label>
+                  <input class="form-control" type="file" id="formFileMultiple" multiple>
+                </div>
+      
+                <div class="form-check form-check-inline">
+                  <label for="formFileMultiple" class="form-label">¿Desea recibir respuesta a su manifestación?</label><br>
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                  <label class="form-check-label" for="inlineCheckbox1">Si</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                  <label class="form-check-label" for="inlineCheckbox2">No</label>
+                </div>
+      
+                <div class="form-check">
+                  <br><label for="formFileMultiple" class="form-label">Los datos suministrados se trataran en conformidad con la Ley 1581 de 2012. ”Por la cual <br>
+                       se dictan disposiciones generales para la protección de datos personales”.</label><br>
+                  <br><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                      <label class="form-check-label" for="flexCheckDefault">
+                      He leido y acepto los terminos de las politicas de seguridad y tratamiento de datos.
+                  </label>
+                </div> 
+                
+
+                  <!-- Button trigger modal -->
+<br><button type="button" class="cosa" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Enviar
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">J.J SYSTEM</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            Gestionaremos su solicitud de forma oportuna, gracias por contactarse con nosotros. 
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        
+        <div class="footer_container">
+            <p> <a href="#">Diseñador de la página web</a>  | copyright [2023] | J.J System</p>
+        </div>
+            
+        <div class="footer_container">
+            <p> <a href="#">Sobre nosotros</a> | <a href="# ">Aviso legal y términos de uso</a> | <a href="#">Políticas de privacidad</a> | <a href="#"> Politica de cookies</a></p>
+        </div>
+        
+    </footer> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>
