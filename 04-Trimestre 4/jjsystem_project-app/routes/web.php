@@ -32,15 +32,19 @@ Route::get('/envioscliente', function () {
 Route::get('/login',function(){
     return view("login");
 });
+
 Route::get('/registro',function(){
     return view("registro");
 });
+
 Route::get('/recuperarContraseña',function(){
     return view("recuperarContraseña");
 });
+
 Route::get('/recuperarContraseña2',function(){
     return view("recuperarContraseñaPaso2");
 });
+
 Route::get('/recuperarContraseña3',function(){
     return view("recuperarContraseñaPaso3");
 });
