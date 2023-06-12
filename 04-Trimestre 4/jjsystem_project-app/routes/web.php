@@ -44,6 +44,7 @@ Route::get('/recuperarContraseña2',function(){
 Route::get('/recuperarContraseña3',function(){
     return view("recuperarContraseñaPaso3");
 });
-Auth::routes();
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Auth::routes();

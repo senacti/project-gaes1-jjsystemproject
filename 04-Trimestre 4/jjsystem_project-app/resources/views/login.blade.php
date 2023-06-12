@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="ES=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesion</title>
-    <link rel="stylesheet" href="{{asset("CSS/FormulariosStyle.css")}}">
+    <link rel="stylesheet" href="{{asset ('CSS/Index.css')}}">
 </head>
 
 <body>
