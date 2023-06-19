@@ -16,7 +16,7 @@
         
         <div class="container logo-login-container">
             
-            <a href="../../HTML/landign_page/Index.html" class="logo">J.J SYSTEM</a>
+            <a href="Index.blade.php" class="logo">J.J SYSTEM</a>
             
             <nav class="login_navigation">
                 <ul>
