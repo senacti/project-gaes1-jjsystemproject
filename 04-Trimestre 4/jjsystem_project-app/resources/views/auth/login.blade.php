@@ -32,10 +32,10 @@
                     <input type="submit" value="Iniciar Sesion" id="iniciarSesion">
                 </div >
                 <div class="recuperar-contraseña">
-                    <a id="recuperarContraseña" href="../formularios/recuperarcontraseña.html">Olvide mi contraseña</a></li>
+                    <a id="recuperarContraseña" href="../formularios/recuperarcontraseña.html">Olvide mi contraseña</a>
                 </div>
                 <div class="login-registrar">
-                  <a id="registrar" href="#">Registrarse</a></li>
+                  <a id="registrar" href="#">Registrarse</a>
               </div>
               </div>
         </form>
