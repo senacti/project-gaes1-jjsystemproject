@@ -7,14 +7,17 @@
     <title>Iniciar Sesion</title>
     <link rel="stylesheet" href="{{asset ('CSS/Index.css')}}">
 </head>
+
 <body>
-<Section class="contenedorPrincipal">
+
+  <Section class="contenedorPrincipal">
     <span class="icon-close">
-    <ion-icon name="close-outline"></ion-icon>
+      <ion-icon name="close-outline"></ion-icon>
     </span>
     <div class = "contenedor-login" >
-        <h1 class="Titulo">Iniciar Sesion</h1>
-          <form action="">
+      <h1 class="Titulo">Iniciar Sesion</h1>
+      <form method="POST" action="{{ route('login') }}">
+      @csrf
             <div class="icon-contenedor">
               <img  src="../../images/FormulariosIMG/login.png" class="icon">
             </div>  
@@ -37,6 +40,8 @@
               </div>
         </form>
       </div>
-  </Section>
-</body>
+  </Section>   
+ </body>
+ <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script src="../../JavaScript/funcionesFormularios.js"></script>
 </html>

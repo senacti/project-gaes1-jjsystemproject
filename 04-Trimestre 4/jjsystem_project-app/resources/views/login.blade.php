@@ -9,13 +9,15 @@
 </head>
 
 <body>
-<Section class="contenedorPrincipal">
+
+  <Section class="contenedorPrincipal">
     <span class="icon-close">
       <ion-icon name="close-outline"></ion-icon>
     </span>
     <div class = "contenedor-login" >
       <h1 class="Titulo">Iniciar Sesion</h1>
-          <form action="">
+      <form method="POST" action="{{ route('login') }}">
+        @csrf
             <div class="icon-contenedor">
               <img  src="../../images/FormulariosIMG/login.png" class="icon">
             </div>  
@@ -38,7 +40,7 @@
               </div>
         </form>
       </div>
-  </Section>
-    
-</body>
+  </Section>   
+ </body>
+</form>
 </html>
