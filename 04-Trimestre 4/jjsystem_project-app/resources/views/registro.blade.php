@@ -5,14 +5,16 @@
     <link rel="stylesheet" href="{{asset ('CSS/Index.css')}}">
     <title>Registrarse</title>
 </head>
-<body>
-<Section class="contenedorPrincipal">
+  <body>
+  
+    <Section class="contenedorPrincipal">
         <span class="icon-close">
           <ion-icon name="close-outline"></ion-icon>
         </span>
         <div class = "contenedor-register" >
             <h1 class="Titulo">Registrarse</h1>
-                <form action="">
+            <form method="POST" action="{{ route('registro') }}">
+            @csrf
                   <!--Parte uno-->
                     <div class="parte1">
                       <div class="Datos">
@@ -65,6 +67,7 @@
                 </form>
             </div>
       </section>
-      <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script src="../../JavaScript/funcionesFormularios.js"></script>
+</body>
+    <!--  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script src="../../JavaScript/funcionesFormularios.js"></script> -->
 </html>
