@@ -53,7 +53,7 @@ body{
     font-size: 2em;
 }
 /*Inicio de sesion*/
-.botonLogin{
+/*.botonLogin{
     width: 130px;
     height: 50px;
     text-decoration: none;
@@ -74,10 +74,10 @@ body{
     font-weight: bold;
     border-radius: 6px;
     transition: background-color 0.3s ease, color 0.3s ease;
-}
+}*/
 .contenedorPrincipal{
     position: absolute;
-    top: 25%;
+    top: 50%;
     left: 30%;
     transform: translate(-50%, -50%);
     width: 450px;
@@ -88,17 +88,17 @@ body{
     border-radius: 20px;
     backdrop-filter: blur(10px);
     box-shadow: inset 0px 0px 30px rgb(183, 186, 205);
-    z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;
+    /*z-index: 1;
     overflow: hidden;
     transform: scale(0);
-    transition: transform .5s ease,height .2s ease;
+    transition: transform .5s ease,height .2s ease;*/
 }
-.contenedorPrincipal.activate-popup {
+/*.contenedorPrincipal.activate-popup {
     transform: scale(1);
-}
+}*/
 .contenedorPrincipal .contenedor-login{
     width: 100%;
     padding: 5px;
@@ -106,12 +106,12 @@ body{
     
 }
 
-.contenedorPrincipal .contenedor-register{
+/*.contenedorPrincipal .contenedor-register{
     display: none;
-}
+}*/
 .contenedorPrincipal .icon-close{
     position: absolute;
-    top : 0;
+    top : 0px;
     right: 0;
     width: 6%;
     height: 6%;
@@ -122,7 +122,12 @@ body{
     justify-content: center;
     align-items: center;
     border-bottom-left-radius:20px;
+    border-top-right-radius: 20px;
     cursor: pointer;
+    z-index:1;
+}
+#icon-close{
+    color: #e8e2e2;
     z-index:1;
 }
 .Titulo{
@@ -259,6 +264,7 @@ body{
     text-align: center;
     text-decoration: none;
     color: #e8e2e2;
+    margin-left: 150px;
 }
 .login-registrar a:hover{
     font-weight: bold;
@@ -298,6 +304,7 @@ body{
     margin-bottom: 0;
 }
 /*Parte dos del formulario de registro*/
+
 .contenedorPrincipal .contenedor-registrer .parte2{
     width: 100%;
     padding: 5px;
@@ -305,7 +312,7 @@ body{
 }
 
 .Parte2 .Datos{
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: first baseline;
     margin-top: 0;

@@ -13,7 +13,7 @@
         </span>
         <div class = "contenedor-register" >
             <h1 class="Titulo">Registrarse</h1>
-            <form method="POST" action="{{ route('registro') }}">
+            <form method="POST" action="{{ route('register') }}">
             @csrf
                   <!--Parte uno-->
                     <div class="parte1">

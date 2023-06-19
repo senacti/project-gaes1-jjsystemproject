@@ -9,11 +9,11 @@
   
     <Section class="contenedorPrincipal">
         <span class="icon-close">
-          <ion-icon name="close-outline"></ion-icon>
+          <ion-icon id="close-outline"></ion-icon>
         </span>
         <div class = "contenedor-register" >
             <h1 class="Titulo">Registrarse</h1>
-            <form method="POST" action="{{ route('registro') }}">
+            <form method="POST" action="{{ route('register') }}">
             @csrf
                   <!--Parte uno-->
                     <div class="parte1">
@@ -68,6 +68,6 @@
             </div>
       </section>
 </body>
-    <!--  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script src="../../JavaScript/funcionesFormularios.js"></script> -->
+      <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<!--<script src="../../JavaScript/funcionesFormularios.js"></script> -->
 </html>
