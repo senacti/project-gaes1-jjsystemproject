@@ -14,7 +14,8 @@
     </span>
     <div class = "contenedor-login" >
         <h1 class="Titulo">Iniciar Sesion</h1>
-          <form action="">
+          <form method="POST" action="{{ route('login') }}">
+          @csrf
             <div class="icon-contenedor">
               <img  src="../../images/FormulariosIMG/login.png" class="icon">
             </div>  
