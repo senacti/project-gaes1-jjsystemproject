@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" href="{{asset ('CSS/Index.css')}}">
+    <link rel="stylesheet" href="{{asset ('CSS/FormulariosStyle.css')}}">
     <title>Registrarse</title>
 </head>
 <body>
@@ -64,7 +64,9 @@
                       </div>    
                 </form>
             </div>
-      </section>
-      <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script src="../../JavaScript/funcionesFormularios.js"></script>
+  </section>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script src="../../JavaScript/formulariosLaravel.js"></script>
+
+  </body>
 </html>

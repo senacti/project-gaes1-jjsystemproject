@@ -93,12 +93,12 @@ body{
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    transform: scale(0);
-    transition: transform .5s ease,height .2s ease;
+   /* transform: scale(0);*/
+    /*transition: transform .5s ease,height .2s ease;*/
 }
-.contenedorPrincipal.activate-popup {
+/*.contenedorPrincipal.activate-popup {
     transform: scale(1);
-}
+}*/
 .contenedorPrincipal .contenedor-login{
     width: 100%;
     padding: 5px;
@@ -106,9 +106,9 @@ body{
     
 }
 
-.contenedorPrincipal .contenedor-register{
+/*.contenedorPrincipal .contenedor-register{
     display: none;
-}
+}*/
 .contenedorPrincipal .icon-close{
     position: absolute;
     top : 0;
@@ -197,7 +197,8 @@ body{
   
 
 .Input-datos-formularios input{
-    display: block;justify-items: center;
+    display: block;
+    justify-items: center;
     margin-top: 5px;
     margin-left: 16%;
     margin-bottom: 5px;
