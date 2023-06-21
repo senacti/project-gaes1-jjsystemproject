@@ -12,7 +12,7 @@
         </span>
         <div class = "contenedor-register" >
             <h1 class="Titulo">Registrarse</h1>
-                <form action="">
+                <form method="POST" action="{{ route('register') }}>
                       <div class="Datos">
                         <div class="Input-datos-formularios">
                         <label for="NumeroDocumento">Numero de documento</label>

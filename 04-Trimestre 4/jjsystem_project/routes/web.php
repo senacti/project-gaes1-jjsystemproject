@@ -33,8 +33,8 @@ Route::get('/login',function(){
     return view("login");
 });
 
-Route::get('/registro',function(){
-    return view("registro");
+Route::get('/register',function(){
+    return view("register");
 });
 
 Route::get('/recuperarContraseña',function(){
