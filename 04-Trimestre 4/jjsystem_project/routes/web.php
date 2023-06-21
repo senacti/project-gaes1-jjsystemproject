@@ -49,6 +49,7 @@ Route::get('/recuperarContraseña3',function(){
     return view("recuperarContraseñaPaso3");
 });
 
+Route::post('/register', 'RegisterController@register')->name('register');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Auth::routes();

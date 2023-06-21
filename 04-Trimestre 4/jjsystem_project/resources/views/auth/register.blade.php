@@ -13,6 +13,7 @@
         <div class = "contenedor-register" >
             <h1 class="Titulo">Registrarse</h1>
                 <form method="POST" action="{{ route('register') }}">
+                  @csrf
                       <div class="Datos">
                         <div class="Input-datos-formularios">
                         <label for="NumeroDocumento">Numero de documento</label>
