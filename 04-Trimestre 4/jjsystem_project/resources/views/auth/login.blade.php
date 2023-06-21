@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="ES=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesion</title>
-    <link rel="stylesheet" href="{{asset ('CSS/Index.css')}}">
+    <link rel="stylesheet" href="{{asset ('CSS/FormulariosStyle.css')}}">
 </head>
 <body>
 <Section class="contenedorPrincipal">
@@ -14,7 +14,8 @@
     </span>
     <div class = "contenedor-login" >
         <h1 class="Titulo">Iniciar Sesion</h1>
-          <form action="">
+          <form method="POST" action="{{ route('login') }}">
+          @csrf
             <div class="icon-contenedor">
               <img  src="../../images/FormulariosIMG/login.png" class="icon">
             </div>  
@@ -38,5 +39,6 @@
         </form>
       </div>
   </Section>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 </body>
 </html>

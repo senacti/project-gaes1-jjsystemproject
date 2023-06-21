@@ -9,253 +9,186 @@ body{
     height: 100vh;
     justify-content: center;
     align-items: center;
-    background: url(../images/fondoejemplo.png);
-    background-size:100%;
-}
-.contenedorPrincipal{
-    width: 100%;
-    max-width: 400px;
-    background: rgba(14, 24, 40, 0.65);
-    padding: 28px;
-    margin: 0, 48px;
-    box-shadow: inset 0px -2px -2px rgb(13, 24, 92);
-}
-.Datos{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content:space-between ;
-    padding: 10px 0;
+    background: rgb(36, 47, 83);
 }
 
-.botonC input{
-    background-color: #018abe ;
-    border: none;
-    color: whitesmoke;
-    border-radius: 7px;
+.contenedorPrincipal {
+    width: 350px;
+    height: auto;
+    padding: 20px;
+    background: rgba(5, 10, 18, 0.662);
     padding: 10px;
+    border: 2px solid rgba(137, 144, 169, 0.957);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: inset 0px 0px 30px rgb(183, 186, 205);
+    z-index: 1;
+    background: transparent;
+    overflow: hidden;
+  }
+  .contenedor-login{
+    background-color: transparent;
+    padding: 40px;
+    border-radius: 5px; 
 }
-.Titulo{
+.icon-contenedor{
     display: flex;
-    width: 40%;
+    justify-content: center;
     align-items: center;
-    font-size: 16px;
-    font-weight: 20;
-    text-align: center;
-    padding-bottom: 6px;
-    padding-left: 20px;
-    color: whitesmoke;
-    border-bottom: solid 2px rgba(1, 138, 190, 1);
-}
-/*Registro*/
-.Input-datos:nth-child( 2n){
-    justify-content:left;
-}
-.Input-datos{
-    display: flex;
-    flex-wrap:wrap;
-    width: 50%;
-    padding-bottom: 10px;
-}
-.Input-datos label{
-    width: 95%;
-    color: whitesmoke;
-    font-size: 13px;
-    font-weight: 00;
-    margin: 5px 0;
-}
-
-.Input-datos input{
-    display: flex;
-    flex-wrap: wrap;
-    width: 95%;
-    color: whitesmoke;
-    border-radius: 2px;
-    background: none;
-    border: none;
-    border-bottom: 1px solid whitesmoke;
+    height: 4%;
     padding: 5px;
+    margin: 5px;
+    margin-top: 5%;
+    margin-bottom:25% ;
 }
-.Input-datos select{
-    background: none;
-    border: none;
-    color: whitesmoke;
-    border-bottom: 1px solid whitesmoke;
-}
-.Input-datos-bloque{
+.icon {
     display: flex;
-    flex-wrap:wrap;
-    width: 100%;
-    padding-bottom: 10px;
-
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 3.9em;
+    height: 3.9em;
+    line-height: 57px;
 }
-.Input-datos-bloque input{
+  .icon-close {
+    position: absolute;
+    top : 0;
+    right: 0;
+    width: 7%;
+    height: 9%;
+    background:#018abe;
+    font-size: 2em;
+    color: #e8e2e2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius:20px;
+    cursor: pointer;
+    z-index:1;
+  }
+  
+  .contenedor-register {
+    background-color: transparent;
+    padding: 40px;
+    border-radius: 5px;
+  }
+  
+  .Titulo {
     display: block;
-    block-size: 50%;
-    color: whitesmoke;
-    margin-bottom: 10px;
-    width: 210%;
-    padding-bottom: 0px;
+    width: 50%;
+    height: 5%;
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    border-bottom: #018abe 2px solid;
+  }
+  
+  .parte1 {
+    display: block;
+  }
+  
+  .Parte2 {
+    display: none;
+  }
+  
+  .Datos {
+    margin-bottom: 20px;
+  }
+  .Input-datos-formularios input {
+    width: 85%;
+    height: 15%;
+    background: transparent;
     border: none;
-    background: none;
-    border-bottom: 1px solid whitesmoke;
-    border-radius: 2px;
-}
-.Input-datos-bloque label{
+    outline: none;
+    border-bottom: rgb(240, 238, 238) 2px solid;
+    color: #e8e2e2;
+    border-radius: 5px;
+    margin-bottom: 3px;
+  }
+  .Input-datos-formularios label {
     display: block;
-    width: 100%;
-    color: whitesmoke;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    height: 10%;
+    top: 5px;
+    margin-left: 1%;
+    color: rgb(240, 238, 238);
     font-size: 13px;
-    font-weight: 00;
-    margin: 5px 0;
-}
-.botones label{
-    color: whitesmoke;
-    font-size: 13px;
-    margin: 15px;
-    
-    padding: 1px 20px 0 5px ;
-} /*Estos botones son los de seleccion (numeros y pais)*/
+    transform: translateY(-10%);
+    pointer-events: none;
+    transition: .5s;
+  }
 
-#crear-cuenta-boton{
-    margin-top: 40px;
+  .Input-datos-formularios select{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+    color: rgb(216, 223, 234);
+    border-bottom: 1px solid whitesmoke;
+    width: 65%;
+    height: 15%;
+    margin-top: 5px;
+    margin-left: 1%;
+    margin-bottom: 5px
 }
-#crear-cuenta-boton input{
-    display:inline-block;
-    width: 43%;
+
+  .login-registrar {
+    text-align: center;
     margin-top: 10px;
-    margin-left: 60%;
-    font-size: 13px;
-    padding: 6px;
+  }
+  .login-registrar a{
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    color: #e8e2e2;
+  }
+  .login-registrar a:hover{
+    font-weight: bold;
+    text-decoration: underline;
+    color: #018abe;
 }
-
-/*Las lineas de codigo siguiente se encargan de ocultar los botones del input type="number*/
+  .check-botton {
+    margin-top: 15px;
+  }
+  
+  .botonC {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .botonC input[type="submit"] {
+    background-color: #018abe ;
+    color: whitesmoke;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .botonC input[type="submit"]:hover {
+    background-color: whitesmoke;
+    color:#018abe ;
+    
+  }
+  #recuperarContraseña {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    margin-top: 2px;
+}
+#recuperarContraseña:hover {
+    font-weight: bold;
+    text-decoration: underline;
+    color: #018abe;
+}
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
     -webkit-appearance: none; 
-    margin: 0; 
-}
-/*Login*/
-.Input-datos-login{
-    display: inline-block;
-    width: 50%;
-    margin-left: 25%;
-    margin-top: 5%;
-    padding-left: 0%;
-    padding-bottom: 10px;   
-}
-.Input-datos-login input{
-    margin-top: 10%;
-    margin-bottom: 10%;
-    background: none;
-    border: none;
-    border-bottom: 1px solid whitesmoke;
-    border-radius: 2px;    
-}
-.Input-datos-login label{
-    color: whitesmoke;
-    font-size: 13px;
-   
-}
-.icon {
-    display: block;
-    width: 60px;
-    margin-top: 5px;
-    margin-left: 150px;
-    
-}
-
-#iniciarSesion{
-    padding:10px;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    margin-left: 120px;
-    margin-right: 20px;   
-}
-
-/*Recuperar Contraseña*/
-.textContraseña{
-    text-align: center;
-    margin-bottom: 40px;
-    margin-top: 40px;
-    color: whitesmoke;
-}
-#recuperarContraseña{
-    color: whitesmoke;
-    font-size: 13px;
-    margin-left: 110px;
-
-}
-.titulo{
-    font-size: 20px;   
-}
-.subtitulo{
-    margin-top: 40px;
-    font-size: 13px; 
-    text-decoration: none;  
-}
-#botonContinuar{
-    outline: none;
-    text-decoration: none;
-    display: inline-block;
-    width: 30%;
-    padding: 0 10px 0 10px;
-    margin-right: 0.3%;
-    margin-left: 40%;
-    margin-top: 30%;
-    margin-bottom: 20%;
-    text-align: center;
-    line-height: 2;
-    color:whitesmoke;
-    background-color:#018abe  ;
-    border-radius: 7px;
-}
-/*Recuperar contraseña paso 2*/
-.codigoComprobacion input {
-    background: none;
-    border: none;
-    border-bottom: 1px solid whitesmoke;
-    border-radius: 2px;
-    display: inline-block;
-    width: 30px;
-    margin-left: 2%;
-    margin-right: 2%;
-    margin-bottom: 40%;
-    color: whitesmoke;
-    font-size: 20px;
-    text-align: center;
-}
-.codigoComprobacion label{
-    width: 95%;
-    color: whitesmoke;
-    font-size: 13px;
-    font-weight: 00;
-    margin: 5px 0;
-}
-.codigoComprobacion a{
-    display: block;
-    color: whitesmoke;
-    margin-left: 5%;
-    margin-top: 0%;
-    margin-bottom: 0%;
-    font-size: 13px;
-}
-#contraseñasActualiza{
-    margin-bottom: 20px;
-    justify-content: center;
-
-}
-#botonActualizaContraseña{
-    outline: none;
-    text-decoration: none;
-    display: inline-block;
-    width: 60%;
-    padding: 0 0px 0 0px;
-    margin-top: 20%;
-    margin-bottom: 2%;
-    margin-left: 20%;
-    text-align: center;
-    line-height: 2;
-    color:whitesmoke;
-    background-color:#018abe  ;
-    border-radius: 7px;
+    margin: 0;
 }
