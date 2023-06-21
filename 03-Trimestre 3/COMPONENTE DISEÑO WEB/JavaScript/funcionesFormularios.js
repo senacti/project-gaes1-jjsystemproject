@@ -31,13 +31,3 @@ contenedorRegister.style.display = "none";
 contenedorLogin.style.display = "block";
 });
 
-const botonContinuar = document.querySelector('#Continuar');
-const parte1 = document.querySelector('.parte1');
-const parte2 = document.querySelector('.parte2');
-const camposAValidar = ['Nombre', 'Apellido', 'NumeroTelefono', 'email*', 'TipoDoc','NumeroDocumento'];
-
-botonContinuar.addEventListener('click',() =>{
-    //validacion de campos
-    parte1.style.display = 'none';
-    parte2.style.display = 'block';
-});
