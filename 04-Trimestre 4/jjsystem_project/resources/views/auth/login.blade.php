@@ -22,9 +22,9 @@
               <div class="Datos">
                 <div class="Input-datos-formularios">
                   <label>Email</label>
-                  <input type="email" class="input" required  id="email">
+                  <input type="email" class="input" required  id="email" name="email">
                   <label>Contraseña</label>
-                  <input type="password" class="input" required id="password">
+                  <input type="password" class="input" required id="password" name="password">
                 </div>
                 <div class="botonC">
                     <input type="submit" value="Iniciar Sesion" id="iniciarSesion">
@@ -40,6 +40,5 @@
       </div>
   </Section>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script src="../../JavaScript/formulariosLaravel.js"></script>
 </body>
 </html>

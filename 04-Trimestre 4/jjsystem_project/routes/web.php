@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Auth\LoginRegisterController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,9 +17,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+<<<<<<< HEAD
 Route::get('/Index', function () {
     return view("Index");
 });
+=======
+>>>>>>> 2ef7cc576ff1ac11fffa726b3220809acb0c1814
 
 Route::get('/venta_productos', function () {
     return view("venta_productos");
@@ -31,14 +34,6 @@ Route::get('/camaras', function () {
 
 Route::get('/envioscliente', function () {
     return view("EnviosCliente_dashboard");
-});
-
-Route::get('/login',function(){
-    return view("login");
-});
-
-Route::get('/registro',function(){
-    return view("registro");
 });
 
 Route::get('/recuperarContraseña',function(){
@@ -53,13 +48,25 @@ Route::get('/recuperarContraseña3',function(){
     return view("recuperarContraseñaPaso3");
 });
 
+<<<<<<< HEAD
 Route::get('/gestion_productos',function(){
     return view("gestion_productos");
 });
 
+=======
+Route::get('/formulariopqrsf',function(){
+    return view("formulariopqrsf");
+});
+
+Route::post('/register', 'RegisterController@register')->name('register');
+>>>>>>> 2ef7cc576ff1ac11fffa726b3220809acb0c1814
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Auth::routes();
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
