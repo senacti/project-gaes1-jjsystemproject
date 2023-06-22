@@ -49,7 +49,6 @@ Route::get('/gestion_productos',function(){
     return view("gestion_productos");
 });
 
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Auth::routes();
 Auth::routes();
