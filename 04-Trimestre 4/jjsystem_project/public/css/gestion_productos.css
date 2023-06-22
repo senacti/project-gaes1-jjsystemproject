@@ -128,7 +128,7 @@ nav{
 }
 
 .s-data-table{
-    padding: 2rem
+    padding: 3rem
 }
 
 .data-table{
@@ -148,6 +148,5 @@ nav{
 .btn-create{
     width: 12rem;
     border-radius: 2rem;
-    margin-left: 3rem;
     margin-top: 1rem;
 }
