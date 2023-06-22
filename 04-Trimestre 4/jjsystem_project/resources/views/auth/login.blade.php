@@ -22,9 +22,9 @@
               <div class="Datos">
                 <div class="Input-datos-formularios">
                   <label>Email</label>
-                  <input type="email" class="input" required  id="email">
+                  <input type="email" class="input" required  id="email" name="email">
                   <label>Contraseña</label>
-                  <input type="password" class="input" required id="password">
+                  <input type="password" class="input" required id="password" name="password">
                 </div>
                 <div class="botonC">
                     <input type="submit" value="Iniciar Sesion" id="iniciarSesion">
