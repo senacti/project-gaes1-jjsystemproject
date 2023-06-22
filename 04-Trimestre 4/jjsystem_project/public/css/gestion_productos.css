@@ -1,0 +1,154 @@
+:root  {
+    --primary: #263465;
+    --light: #FFFFFF;
+}
+
+body{
+    overflow: hidden;
+    font-family: 'Montserrat',  sans-serif;
+    color: var(--primary);
+}
+
+.bg-primary {
+    background-color: var(--primary) !important;
+}
+
+.bg-light {
+    background-color: var(--light) !important;
+}
+
+#sidebar-container {
+    min-height: 100vh;
+}
+
+#sidebar-container .logo {
+    text-align: center;
+    font-weight: bold;
+    padding: 0 1.5rem;
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+}
+
+#sidebar-container .menu{
+    width: 18rem;
+}
+
+.menu a{
+    background-color: #0C3759;
+    padding: 1rem 1rem;
+    margin: 2rem;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 2rem;
+    transition: all 0.3s linear;
+}
+
+.menu a:hover{
+    background-color:#018ABE;
+}
+
+.a-selected a{
+    padding: 0;
+    margin: 0;
+    padding: 1rem 1rem;
+    padding-right: 2.5rem;
+    margin-left: 2rem;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 2rem 0rem 0rem 2rem;
+    transition: none;
+    background-color:#018ABE;
+}
+
+.a-selected a:hover{
+    background-color: none;
+}
+
+.navbar{
+    border-bottom:#000000;
+}
+
+nav{
+    color: #02457A;
+}
+
+.profile{
+    margin-right: 2rem;
+}
+
+.greetings{
+    margin: 1rem 2rem;
+    font-weight: bold;
+}
+
+.border-bottom{
+    color: #000000;
+}
+
+.navbar-light .navbar-nav .nav-link{
+    color: #000000;
+}
+
+.dropdown-item{
+    color: #000000;
+}
+
+.avatar{
+    max-width: 35px;
+}
+
+#content{
+    overflow-y: auto;
+    height: 100vh;
+    padding-bottom: 5rem;
+}
+
+.available_prod{
+    padding: 0;
+    margin-left: 2rem;
+    padding-top: 4rem;
+    position: absolute;
+    color:#02457A ;
+}
+
+.search_prod{
+    margin-left: 3rem;
+    padding-top: 12.5rem;
+}
+
+.btn-search{
+    margin: 0.1rem;
+    padding: 0.2rem;
+    right: 0.8rem;
+    background-color: var(--light);
+}
+
+.btn-search-img{
+    width: 1rem;
+}
+
+.s-data-table{
+    padding: 3rem;
+    padding-top: 1rem;
+}
+
+.data-table{
+    overflow-y: scroll;
+    margin: auto;
+}
+
+.data-table img{
+    text-align: center;
+    max-width: 30px;
+}
+
+.icon{
+    display: flex;
+    justify-content: center;
+}
+
+.btn-create{
+    width: 12rem;
+    border-radius: 2rem;
+    margin-top: 1rem;
+}

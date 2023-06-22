@@ -18,6 +18,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/Index', function () {
+    return view("Index");
+});
 
 Route::get('/venta_productos', function () {
     return view("venta_productos");
@@ -43,11 +46,10 @@ Route::get('/recuperarContraseña3',function(){
     return view("recuperarContraseñaPaso3");
 });
 
-Route::get('/formulariopqrsf',function(){
-    return view("formulariopqrsf");
+Route::get('/gestion_productos',function(){
+    return view("gestion_productos");
 });
 
-Route::post('/register', 'RegisterController@register')->name('register');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Auth::routes();
@@ -58,3 +60,13 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//RUTAS CRUD COTIZACIONES 
+
+Route::get('/cotizaciones', 'cotizacionController@index')->name('cotizaciones.index');
+Route::get('/cotizaciones/create', 'cotizacionController@create')->name('cotizaciones.create');
+Route::get('/cotizaciones', 'cotizacionController@store')->name('cotizaciones.store');
+Route::get('/cotizaciones/{id}', 'cotizacionController@show')->name('cotizaciones.show');
+Route::get('/cotizaciones/{id}/edit', 'ProductoController@edit')->name('cotizaciones.edit');
+Route::put('/cotizaciones/{id}', 'ProductoController@update')->name('cotizaciones.update');
+Route::delete('/cotizaciones/{id}', 'ProductoController@destroy')->name('cotizaciones.destroy');
