@@ -94,8 +94,8 @@
                                 <td>Camaras</td>
                                 <td>300.000</td>
                                 <td>11</td>
-                                <td class="icon"><a href="#"><img src="../../images/iconos/edit.png" alt="Modificar"></a></td>
-                                <td><a href="#"><img src="{{asset('images/fotoperfil.png')}}" alt="Editar"></a></td>
+                                <td class="icon"><a href="#"><img src="{{asset('images/iconos/edit.png')}}" alt="Modificar"></a></td>
+                                <td><a href="#"><img src="{{asset('images/iconos/delete.png')}}" alt="Editar"></a></td>
                             </tr>
                             <tr>
                                 <th scope="row">2</th>
@@ -104,8 +104,8 @@
                                 <td>Camaras</td>
                                 <td>140.000</td>
                                 <td>18</td>
-                                <td><a href="#"><img src="../../images/iconos/edit.png" alt="Modificar"></a></td>
-                                <td><a href="#"><img src="../../images/iconos/delete.png" alt="Editar"></a></td>
+                                <td><a href="#"><img src="{{asset('images/iconos/edit.png')}}" alt="Modificar"></a></td>
+                                <td><a href="#"><img src="{{asset('images/iconos/delete.png')}}" alt="Editar"></a></td>
                             </tr>
                             <tr>
                                 <th scope="row">3</th>
@@ -114,8 +114,8 @@
                                 <td>Camaras</td>
                                 <td>89.000</td>
                                 <td>6</td>
-                                <td><a href="#"><img src="../../images/iconos/edit.png" alt="Modificar"></a></td>
-                                <td><a href="#"><img src="../../images/iconos/delete.png" alt="Editar"></a></td>
+                                <td><a href="#"><img src="{{asset('images/iconos/edit.png')}}" alt="Modificar"></a></td>
+                                <td><a href="#"><img src="{{asset('images/iconos/delete.png')}}" alt="Editar"></a></td>
                             </tr>
                             <tr>
                                 <th scope="row">4</th>
@@ -124,8 +124,8 @@
                                 <td>Camaras</td>
                                 <td>110.000</td>
                                 <td>18</td>
-                                <td><a href="#"><img src="../../images/iconos/edit.png" alt="Modificar"></a></td>
-                                <td><a href="#"><img src="../../images/iconos/delete.png" alt="Editar"></a></td>
+                                <td><a href="#"><img src="{{asset('images/iconos/edit.png')}}" alt="Modificar"></a></td>
+                                <td><a href="#"><img src="{{asset('images/iconos/delete.png')}}" alt="Editar"></a></td>
                             </tr>
                             <tr>
                                 <th scope="row">5</th>
@@ -134,8 +134,8 @@
                                 <td>Camaras</td>
                                 <td>250.000</td>
                                 <td>15</td>
-                                <td><a href="#"><img src="../../images/iconos/edit.png" alt="Modificar"></a></td>
-                                <td><a href="#"><img src="../../images/iconos/delete.png" alt="Editar"></a></td>
+                                <td><a href="#"><img src="{{asset('images/iconos/edit.png')}}" alt="Modificar"></a></td>
+                                <td><a href="#"><img src="{{asset('images/iconos/delete.png')}}" alt="Editar"></a></td>
                             </tr>
                             </tbody>
                         </table>
