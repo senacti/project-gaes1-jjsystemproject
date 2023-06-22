@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario PQRSF - J.J System</title>
-    <link rel="stylesheet" href="{{asset('CSS/Cliente_landing_page/formulariopqrsf.css')}}">
+    <link rel="stylesheet" href="{{asset('CSS/formulariopqrsf.css')}}">
     <link rel="stylesheet" href="{{asset('CSS/normalize.css')}}">
     <link rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" href="{{asset('https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css')}}">
 </head>
