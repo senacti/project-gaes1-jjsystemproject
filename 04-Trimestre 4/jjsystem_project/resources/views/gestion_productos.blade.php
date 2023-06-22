@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
     <link rel="stylesheet" href="{{asset('css/normalize.css')}}">
-    <link rel="stylesheet" href="{{asset('css/registro_producto.css')}}">
+    <link rel="stylesheet" href="{{asset('css/gestion_productos.css')}}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" >
@@ -84,6 +84,7 @@
                                 <th scope="col">Categoría</th>
                                 <th scope="col">Precio</th>
                                 <th scope="col">Cantidad</th>
+                                <th scope="col">Proveedor</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -94,8 +95,9 @@
                                 <td>Camaras</td>
                                 <td>300.000</td>
                                 <td>11</td>
-                                <td class="icon"><a href="#"><img src="../../images/iconos/edit.png" alt="Modificar"></a></td>
-                                <td><a href="#"><img src="{{asset('images/fotoperfil.png')}}" alt="Editar"></a></td>
+                                <td>Proveedor 1</td>
+                                <td class="icon"><a href="#"><img src="{{asset('images/iconos/edit.png')}}" alt="Modificar"></a></td>
+                                <td><a href="#"><img src="{{asset('images/iconos/delete.png')}}" alt="Editar"></a></td>
                             </tr>
                             <tr>
                                 <th scope="row">2</th>
@@ -104,8 +106,9 @@
                                 <td>Camaras</td>
                                 <td>140.000</td>
                                 <td>18</td>
-                                <td><a href="#"><img src="../../images/iconos/edit.png" alt="Modificar"></a></td>
-                                <td><a href="#"><img src="../../images/iconos/delete.png" alt="Editar"></a></td>
+                                <td>Proveedor 2</td>
+                                <td class="icon"><a href="#"><img src="{{asset('images/iconos/edit.png')}}" alt="Modificar"></a></td>
+                                <td><a href="#"><img src="{{asset('images/iconos/delete.png')}}" alt="Editar"></a></td>
                             </tr>
                             <tr>
                                 <th scope="row">3</th>
@@ -114,8 +117,9 @@
                                 <td>Camaras</td>
                                 <td>89.000</td>
                                 <td>6</td>
-                                <td><a href="#"><img src="../../images/iconos/edit.png" alt="Modificar"></a></td>
-                                <td><a href="#"><img src="../../images/iconos/delete.png" alt="Editar"></a></td>
+                                <td>Proveedor 3</td>
+                                <td class="icon"><a href="#"><img src="{{asset('images/iconos/edit.png')}}" alt="Modificar"></a></td>
+                                <td><a href="#"><img src="{{asset('images/iconos/delete.png')}}" alt="Editar"></a></td>
                             </tr>
                             <tr>
                                 <th scope="row">4</th>
@@ -124,8 +128,9 @@
                                 <td>Camaras</td>
                                 <td>110.000</td>
                                 <td>18</td>
-                                <td><a href="#"><img src="../../images/iconos/edit.png" alt="Modificar"></a></td>
-                                <td><a href="#"><img src="../../images/iconos/delete.png" alt="Editar"></a></td>
+                                <td>Proveedor 4</td>
+                                <td class="icon"><a href="#"><img src="{{asset('images/iconos/edit.png')}}" alt="Modificar"></a></td>
+                                <td><a href="#"><img src="{{asset('images/iconos/delete.png')}}" alt="Editar"></a></td>
                             </tr>
                             <tr>
                                 <th scope="row">5</th>
@@ -134,8 +139,9 @@
                                 <td>Camaras</td>
                                 <td>250.000</td>
                                 <td>15</td>
-                                <td><a href="#"><img src="../../images/iconos/edit.png" alt="Modificar"></a></td>
-                                <td><a href="#"><img src="../../images/iconos/delete.png" alt="Editar"></a></td>
+                                <td>Proveedor 5</td>
+                                <td class="icon"><a href="#"><img src="{{asset('images/iconos/edit.png')}}" alt="Modificar"></a></td>
+                                <td><a href="#"><img src="{{asset('images/iconos/delete.png')}}" alt="Editar"></a></td>
                             </tr>
                             </tbody>
                         </table>

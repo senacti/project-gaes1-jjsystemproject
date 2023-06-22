@@ -128,10 +128,12 @@ nav{
 }
 
 .s-data-table{
-    padding: 2rem
+    padding: 3rem;
+    padding-top: 1rem;
 }
 
 .data-table{
+    overflow-y: scroll;
     margin: auto;
 }
 
@@ -148,6 +150,5 @@ nav{
 .btn-create{
     width: 12rem;
     border-radius: 2rem;
-    margin-left: 3rem;
     margin-top: 1rem;
 }
