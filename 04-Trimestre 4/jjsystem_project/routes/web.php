@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginRegisterController;
-use App\Http\Controllers\Auth\FormularioPqrsfController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -50,6 +50,10 @@ Route::get('/gestion_productos',function(){
     return view("gestion_productos");
 });
 
+Route::get('/formulariopqrsf',function(){
+    return view("formulariopqrsf");
+});
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Auth::routes();
@@ -70,3 +74,4 @@ Route::get('/cotizaciones/{id}', 'cotizacionController@show')->name('cotizacione
 Route::get('/cotizaciones/{id}/edit', 'ProductoController@edit')->name('cotizaciones.edit');
 Route::put('/cotizaciones/{id}', 'ProductoController@update')->name('cotizaciones.update');
 Route::delete('/cotizaciones/{id}', 'ProductoController@destroy')->name('cotizaciones.destroy');
+
