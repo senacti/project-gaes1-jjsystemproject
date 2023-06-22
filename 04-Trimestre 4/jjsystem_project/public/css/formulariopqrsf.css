@@ -33,7 +33,7 @@ body {
 }
 
 .logo{
-    font-family: 'Berlin';
+    font-weight: bold;
     font-size: 1.8em;
     margin-left: 20%;
 }
@@ -180,14 +180,15 @@ body {
 
 .container{
     display:flex;
-   align-items: center;
-   justify-content:center;
- }
+    align-items: center;
+    justify-content:center;
+    padding-bottom: 1rem;
+}
 
- .cosa { 
+.cosa { 
     justify-content: center;
-   display: block;
- }
+    display: block;
+}
 
 .container .first_form {
     border: 1px solid #263465;
@@ -206,9 +207,6 @@ body {
     background-color: #2a3260;
     color: #ffffff;
     font-size:small;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
 }
 
 .footer_container p a{
