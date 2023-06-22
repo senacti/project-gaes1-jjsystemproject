@@ -17,12 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-<<<<<<< HEAD
 Route::get('/Index', function () {
     return view("Index");
 });
-=======
->>>>>>> 2ef7cc576ff1ac11fffa726b3220809acb0c1814
 
 Route::get('/venta_productos', function () {
     return view("venta_productos");
@@ -48,18 +45,10 @@ Route::get('/recuperarContraseña3',function(){
     return view("recuperarContraseñaPaso3");
 });
 
-<<<<<<< HEAD
 Route::get('/gestion_productos',function(){
     return view("gestion_productos");
 });
 
-=======
-Route::get('/formulariopqrsf',function(){
-    return view("formulariopqrsf");
-});
-
-Route::post('/register', 'RegisterController@register')->name('register');
->>>>>>> 2ef7cc576ff1ac11fffa726b3220809acb0c1814
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Auth::routes();
