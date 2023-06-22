@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginRegisterController;
+use App\Http\Controllers\Auth\FormularioPqrsfController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
