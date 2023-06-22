@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/Index', function () {
+    return view("Index");
+});
+
 Route::get('/venta_productos', function () {
     return view("venta_productos");
 });
@@ -47,6 +51,10 @@ Route::get('/recuperarContraseña2',function(){
 
 Route::get('/recuperarContraseña3',function(){
     return view("recuperarContraseñaPaso3");
+});
+
+Route::get('/gestion_productos',function(){
+    return view("gestion_productos");
 });
 
 
