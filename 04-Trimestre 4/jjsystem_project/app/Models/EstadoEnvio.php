@@ -5,7 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Envio extends Model
+class EstadoEnvio extends Model
 {
-    public $timestamps = false;
+    protected $table = 'estadoenvios';
+    protected $primaryKey = 'idEstadoEnvio';
 }
