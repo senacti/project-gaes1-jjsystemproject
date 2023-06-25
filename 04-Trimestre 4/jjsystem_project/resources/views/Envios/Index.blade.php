@@ -74,70 +74,31 @@
                             <thead>
                             <tr>
                                 <th scope="col">ID</th>
-                                <th scope="col">Nombre</th>
-                                <th scope="col">Descripción</th>
-                                <th scope="col">Categoría</th>
-                                <th scope="col">Precio</th>
-                                <th scope="col">Cantidad</th>
-                                <th scope="col">Proveedor</th>
+                                <th scope="col">Dirección</th>
+                                <th scope="col">ID Tecnico</th>
+                                <th scope="col">Estado</th>
+                                <th></th>
+                                <th></th>
                             </tr>
                             </thead>
+
                             <tbody>
+                                @foreach ($envios as $envio)
                             <tr>
-                                <th scope="row">1</th>
-                                <td>Camara 1</td>
-                                <td>Descripción del producto</td>
-                                <td>Camaras</td>
-                                <td>300.000</td>
-                                <td>11</td>
-                                <td>Proveedor 1</td>
-                                <td class="icon"><a href="#"><img src="{{asset('images/iconos/edit.png')}}" alt="Modificar"></a></td>
-                                <td><a href="#"><img src="{{asset('images/iconos/delete.png')}}" alt="Editar"></a></td>
+                                <td>{{ $envio->idEnvio}}</td>
+                                <td>{{ $envio->direccion}}</td>
+                                <td>{{ $envio->idTecnico}}</td>
+                                <td>{{ optional ($envio->EstadoEnvio)->nombreEstadoEnvio }}</td>
+                                <td> <a href="{{ url ('envios/'.$envio->idEnvio. '/edit')}}" class="btn btn-primary btn-sw">Editar</a></td>
+                                <td>
+                                    <form action="{{url('envios/' .$envio->idEnvio)}}" method="post">
+                                        @method("DELETE")
+                                        @csrf
+                                        <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+                                    </form>
+                                </td>
                             </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Camara 2</td>
-                                <td>Descripción del producto</td>
-                                <td>Camaras</td>
-                                <td>140.000</td>
-                                <td>18</td>
-                                <td>Proveedor 2</td>
-                                <td class="icon"><a href="#"><img src="{{asset('images/iconos/edit.png')}}" alt="Modificar"></a></td>
-                                <td><a href="#"><img src="{{asset('images/iconos/delete.png')}}" alt="Editar"></a></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td >Camara 3</td>
-                                <td>Descripción del producto</td>
-                                <td>Camaras</td>
-                                <td>89.000</td>
-                                <td>6</td>
-                                <td>Proveedor 3</td>
-                                <td class="icon"><a href="#"><img src="{{asset('images/iconos/edit.png')}}" alt="Modificar"></a></td>
-                                <td><a href="#"><img src="{{asset('images/iconos/delete.png')}}" alt="Editar"></a></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">4</th>
-                                <td >Camara 4</td>
-                                <td>Descripción del producto</td>
-                                <td>Camaras</td>
-                                <td>110.000</td>
-                                <td>18</td>
-                                <td>Proveedor 4</td>
-                                <td class="icon"><a href="#"><img src="{{asset('images/iconos/edit.png')}}" alt="Modificar"></a></td>
-                                <td><a href="#"><img src="{{asset('images/iconos/delete.png')}}" alt="Editar"></a></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">5</th>
-                                <td >Camara 5</td>
-                                <td>Descripción del producto</td>
-                                <td>Camaras</td>
-                                <td>250.000</td>
-                                <td>15</td>
-                                <td>Proveedor 5</td>
-                                <td class="icon"><a href="#"><img src="{{asset('images/iconos/edit.png')}}" alt="Modificar"></a></td>
-                                <td><a href="#"><img src="{{asset('images/iconos/delete.png')}}" alt="Editar"></a></td>
-                            </tr>
+                                @endforeach
                             </tbody>
                         </table>
                         <a href="{{ url('envios/create') }}" class="btn btn-primary btn-sm">Añadir Envio</a>

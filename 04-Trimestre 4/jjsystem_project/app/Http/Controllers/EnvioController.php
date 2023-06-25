@@ -14,7 +14,8 @@ class EnvioController extends Controller
      */
     public function index()
     {
-        return view ('Envios.Index');
+        $envios = Envio::with('EstadoEnvio')->get(); 
+        return view ('Envios.Index', ['envios' => $envios]);
     }
 
     /**
@@ -32,7 +33,7 @@ class EnvioController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'direccion' => 'required|unique:envios',
+            'direccion' => 'required',
             'idtecnico' => 'required',
             'estado' => 'required',
         ]);
@@ -57,24 +58,40 @@ class EnvioController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Envio $envio)
+    public function edit($idEnvio)
     {
-        //
+        $envio = Envio::find($idEnvio);
+        return view('Envios.Edit', ['envio' => $envio, 'estados' => EstadoEnvio::All()]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Envio $envio)
+    public function update(Request $request, $idEnvio)
     {
-        //
+        $request->validate([
+            'direccion' => 'required',
+            'idtecnico' => 'required',
+            'estado' => 'required',
+        ]);
+
+        $envio = Envio::find($idEnvio);
+        $envio->direccion = $request->input('direccion');
+        $envio->idTecnico = $request->input('idtecnico');
+        $envio->EstadoEnvio_idEstadoEnvio = $request->input('estado');
+        $envio->save();
+
+        return view("Envios.Mensaje", ['msg'=> "Registro Guardado"]);   
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Envio $envio)
+    public function destroy($idEnvio)
     {
-        //
+        $envio = Envio::find($idEnvio);
+        $envio->delete();
+
+        return redirect("envios");
     }
 }
