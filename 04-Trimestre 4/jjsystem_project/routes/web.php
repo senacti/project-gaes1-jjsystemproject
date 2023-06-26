@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginRegisterController;
 use App\Http\Controllers\Auth\FormularioPqrsfController;
 use App\Http\Controllers\EnvioController;
+use App\Http\Controllers\ExportController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -71,4 +72,8 @@ Route::get('/cotizaciones/{id}/edit', 'ProductoController@edit')->name('cotizaci
 Route::put('/cotizaciones/{id}', 'ProductoController@update')->name('cotizaciones.update');
 Route::delete('/cotizaciones/{id}', 'ProductoController@destroy')->name('cotizaciones.destroy');
 
+
 Route::resource('/envios', EnvioController::class);
+
+
+Route::get('export', [ExportController::class, 'export'])->name('export');
