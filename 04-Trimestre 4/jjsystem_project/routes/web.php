@@ -55,14 +55,11 @@ Route::get('/gestion_productos',function(){
     return view("gestion_productos");
 });
 
-<<<<<<< HEAD
 Route::get('/formulariopqrsf',function(){
     return view("formulariopqrsf");
 });
 
 
-=======
->>>>>>> 0174e017f17faf55611ce71a84862fd84c700c98
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Auth::routes();
 Auth::routes();
@@ -83,7 +80,4 @@ Route::get('/cotizaciones/{id}/edit', 'ProductoController@edit')->name('cotizaci
 Route::put('/cotizaciones/{id}', 'ProductoController@update')->name('cotizaciones.update');
 Route::delete('/cotizaciones/{id}', 'ProductoController@destroy')->name('cotizaciones.destroy');
 
-<<<<<<< HEAD
-=======
 Route::resource('/envios', EnvioController::class);
->>>>>>> 0174e017f17faf55611ce71a84862fd84c700c98
