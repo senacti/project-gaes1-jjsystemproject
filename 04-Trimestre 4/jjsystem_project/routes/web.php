@@ -2,13 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginRegisterController;
-<<<<<<< HEAD
-
-=======
 use App\Http\Controllers\Auth\FormularioPqrsfController;
 use App\Http\Controllers\EnvioController;
 use App\Http\Controllers\ExportController;
->>>>>>> 0174e017f17faf55611ce71a84862fd84c700c98
 /*
 |--------------------------------------------------------------------------
 | Web Routes
