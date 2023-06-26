@@ -1,10 +1,8 @@
 <?php
 
+use App\Http\Controllers\citaController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginRegisterController;
-use App\Http\Controllers\Auth\FormularioPqrsfController;
-use App\Http\Controllers\EnvioController;
-use App\Http\Controllers\ExportController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -79,15 +77,12 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-//RUTAS CRUD COTIZACIONES 
+//RUTAS CRUD SERVICIO-TECNICO-CITAS
 
-Route::get('/cotizaciones', 'cotizacionController@index')->name('cotizaciones.index');
-Route::get('/cotizaciones/create', 'cotizacionController@create')->name('cotizaciones.create');
-Route::get('/cotizaciones', 'cotizacionController@store')->name('cotizaciones.store');
-Route::get('/cotizaciones/{id}', 'cotizacionController@show')->name('cotizaciones.show');
-Route::get('/cotizaciones/{id}/edit', 'ProductoController@edit')->name('cotizaciones.edit');
-Route::put('/cotizaciones/{id}', 'ProductoController@update')->name('cotizaciones.update');
-Route::delete('/cotizaciones/{id}', 'ProductoController@destroy')->name('cotizaciones.destroy');
+Route::resource('/Citas', citaController::class);
+//Route::get('cita',[citaController::class,'index']);
+//Route::put('Citas/{idCita}', 'CitasController@update')->name('Citas.update');
+Route::delete('citas/{cita}', 'CitasController@destroy')->name('Citas.destroy');
 
 
 Route::resource('/envios', EnvioController::class);
