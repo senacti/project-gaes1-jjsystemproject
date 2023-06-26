@@ -30,7 +30,7 @@
                         <ul class="navbar-nav ml-auto profile">
                             <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle font-weight-bold" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-                                <img src="../../../images/ft perfil.png" class="img-fluid rounded-circle avatar mr-2" alt="Foto de perfil">
+                                <img src="{{asset('images/fotoperfil.png')}}" class="img-fluid rounded-circle avatar mr-2" alt="Foto de perfil">
                                 Joanny Lopez
                             </a>
                             <div class="dropdown-menu">
@@ -55,7 +55,7 @@
                     </section>
 
                     <section class="container-citas">
-                    
+                        
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">

@@ -149,16 +149,16 @@ nav{
     box-shadow: 2px 2px 4px 2px #6d6666;
 }
 .boton-estado{
+    border: none;
     padding: 10px;
     margin-top: 3px;
     margin:2%;
-    border-radius: 30px;
-    border: 1px solid #6d6666;
+    color:#000000;
     background-color: #FFFFFF;
     transition: background 0.3s ease;
 }
 .boton-estado:hover{
-    background: linear-gradient(#0C3759,#018ABE);
+    background: #018ABE;
     box-shadow: 1px 1px 3px 0px #02457A;
     color:#FFFFFF;
 }

@@ -30,7 +30,7 @@
                         <ul class="navbar-nav ml-auto profile">
                             <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle font-weight-bold" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-                                <img src="../../../images/ft perfil.png" class="img-fluid rounded-circle avatar mr-2" alt="Foto de perfil">
+                                <img src="{{asset('images/fotoperfil.png')}}" class="img-fluid rounded-circle avatar mr-2" alt="Foto de perfil">
                                 Joanny Lopez
                             </a>
                             <div class="dropdown-menu">
@@ -81,14 +81,12 @@
                                 <td>{{$cita->idAdministrador}}</td>
                                 <td>{{$cita->idCotizacion}}</td>
                                 <td>{{$cita->idEstadoCita}}</td>
-                                <td><a href="{{ route('Citas.edit', ['Cita' => $cita->idCita]) }}"class=" btn sm">Editar</a></td>
+                                <td><a href="{{ route('Citas.edit', ['Cita' => $cita->idCita]) }}"class=" boton-estado btn sm">Editar</a></td>
                                 <td> 
-                                    <form action="{{ route ('Citas.destroy/'.$cita->idCita) }}" method="post">
-                                        @method("DELETE")
-                                        @csrf
-                                        <button type="submit"class=" btn-danger btn sm">Eliminar</button>
-                                    </form>
+                                <img src="{{asset('images/iconos/borrar.png')}}" alt="Editar" data-toggle="modal"
+                                    data-target="#delete{{$cita->idCita}}">
                                 </td>
+                                @include("Citas/info")
                             </tr>
                             @endforeach
                         </tbody>

@@ -95,8 +95,8 @@ class citaController extends Controller
      */
     public function destroy($idCita)
     {
-        $cita = cita::find($idCita);
-        $cita->delete();
+        $citas = cita::find($idCita);
+        $citas->delete();
 
         return redirect("Citas");
     }

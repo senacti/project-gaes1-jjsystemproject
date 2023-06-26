@@ -82,10 +82,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::resource('/Citas', citaController::class);
 //Route::get('cita',[citaController::class,'index']);
 //Route::put('Citas/{idCita}', 'CitasController@update')->name('Citas.update');
-Route::delete('citas/{cita}', 'CitasController@destroy')->name('Citas.destroy');
+
 
 
 Route::resource('/envios', EnvioController::class);
-
-
 Route::get('export', [ExportController::class, 'export'])->name('export');
