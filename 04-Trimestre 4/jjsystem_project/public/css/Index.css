@@ -11,15 +11,14 @@ font-family: 'Berlin';
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     height: 100%;
+    
 }
-
 body{
-    display: block-flex;
+    display: block;
     height: 100vh;
     justify-content: center;
     align-items: center;
     background-size:100%;
-    overflow-x: hidden;
 }
 
 .encabezado {
@@ -31,8 +30,8 @@ body{
 }
 
 .encabezado .logo b{
-    font-family: 'Berlin', sans-serif;
-    color: #396bb2;
+    font-family: 'Montserrat', sans-serif;
+    color: #263465;
     font-size: 30px;
     position: relative;
     bottom: 10px;
@@ -43,14 +42,19 @@ body{
     display: flex;
     align-items: center;
     left: 9%;
-    width: 60%;
-    height: 100px;
-    right: 0;
 }
 
+.encabezado .registro h3 {
+    padding: 0 15px;
+    font-size: 15px;
+}
+
+.encabezado .registro a {
+    text-decoration: none;
+    color: #000;
+}
 .encabezado .registro i {
-    display: flex;
-    font-size: 2em;
+    font-size: 25px;
 }
 /*Inicio de sesion*/
 .botonLogin{

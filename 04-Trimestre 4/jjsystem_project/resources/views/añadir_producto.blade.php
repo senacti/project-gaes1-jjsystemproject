@@ -25,7 +25,7 @@
                 <div class="menu">
                     <a href="#" class="d-block text-light font-weight-light">Inicio</a>
                     <div class="a-selected">
-                        <a href="#" class="d-block text-light font-weight-light">Productos y Servicios</a>
+                        <a href="{{asset('gestion_productos')}}" class="d-block text-light font-weight-light">Productos y Servicios</a>
                     </div>                    
                     <a href="#" class="d-block text-light font-weight-light">Servicio Tecnico</a>
                     <a href="#" class="d-block text-light font-weight-light">Envios</a>

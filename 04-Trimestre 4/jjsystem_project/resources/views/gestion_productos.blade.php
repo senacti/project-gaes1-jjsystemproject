@@ -25,7 +25,7 @@
                 <div class="menu">
                     <a href="#" class="d-block text-light font-weight-light">Inicio</a>
                     <div class="a-selected">
-                        <a href="#" class="d-block text-light font-weight-light">Productos y Servicios</a>
+                        <a href="{{asset('gestion_productos')}}" class="d-block text-light font-weight-light">Productos y Servicios</a>
                     </div>                    
                     <a href="#" class="d-block text-light font-weight-light">Servicio Tecnico</a>
                     <a href="#" class="d-block text-light font-weight-light">Envios</a>
@@ -59,11 +59,9 @@
                 <div id="content">
                     <section class="available_prod">
                         <div class="container">
-                            <div class="row">
                                 <div class="col-lg-9 allowed_prod">
-                                    <h2 class="font-weight-bold">Productos disponibles:</h2>
+                                    <h2 class="font-weight-bold">Productos <br> disponibles:</h2>
                                 </div>
-                            </div>
                         </div>
                     </section>
 
@@ -145,7 +143,9 @@
                             </tr>
                             </tbody>
                         </table>
-                        <button type="button" class="btn btn-create btn-success">Añadir producto</button>
+                        <a href="{{asset('añadir_producto')}}">
+                            <button type="button" class="btn btn-create btn-success">Añadir producto</button>
+                        </a>
                     </section>
                 </div>
             </div>

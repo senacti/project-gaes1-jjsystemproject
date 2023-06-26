@@ -103,6 +103,11 @@ nav{
     padding-bottom: 5rem;
 }
 
+.container{
+    margin: 0;
+    padding: 0;
+}
+
 .available_prod{
     padding: 0;
     margin-left: 2rem;
@@ -111,14 +116,9 @@ nav{
     color:#02457A ;
 }
 
-.row {
-    padding-top: 2rem;
-    padding-left: 2rem;
-}
-
 .search_prod{
     margin-left: 3rem;
-    padding-top: 2rem;
+    padding-top: 12.5rem;
 }
 
 .btn-search{
@@ -138,7 +138,6 @@ nav{
 }
 
 .data-table{
-    overflow-y: scroll;
     margin: auto;
 }
 
@@ -155,5 +154,5 @@ nav{
 .btn-create{
     width: 12rem;
     border-radius: 2rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
 }

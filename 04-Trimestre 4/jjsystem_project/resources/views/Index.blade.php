@@ -7,8 +7,9 @@
     <title>J.J SYSTEM</title>
     <link rel="stylesheet" href="{{asset('CSS/index.css')}}">
     <link href="{{asset('https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css')}}" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{asset('/fontawesome-free-6.3.0-web/fontawesome-free-6.3.0-web/css/all.min.css')}}">
-    <link rel="stylesheet" href="{{asset('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
 </head>
 <body>
   <div class="encabezado">
@@ -59,7 +60,7 @@
           <figure>
               <img src="../../images/IMG1.jpg" alt="">
               <div class="capa2">
-                    <a href="../../HTML/landign_page/venta_productos.html"><h3><b>VENTA DE PRODUCTOS</b><br>
+                    <a href="{{asset('venta_productos')}}"><h3><b>VENTA DE PRODUCTOS</b><br>
                     <p><br>Venta de referencias variadas de camaras de 
                     vigilancia, DVR's, alarmas antirrobo, cercas 
                     eléctricas, sensores y mucho más. Todo a los 

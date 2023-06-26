@@ -32,6 +32,14 @@ Route::get('/camaras', function () {
     return view("camaras");
 });
 
+Route::get('/visualizacion_producto', function () {
+    return view("visualizacion_producto");
+});
+
+Route::get('/cotizacion', function () {
+    return view("cotizacion");
+});
+
 Route::get('/envioscliente', function () {
     return view("EnviosCliente_dashboard");
 });
@@ -50,6 +58,10 @@ Route::get('/recuperarContraseña3',function(){
 
 Route::get('/gestion_productos',function(){
     return view("gestion_productos");
+});
+
+Route::get('/añadir_producto',function(){
+    return view("añadir_producto");
 });
 
 Route::get('/formulariopqrsf',function(){
