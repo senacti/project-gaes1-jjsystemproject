@@ -53,7 +53,6 @@
                 </nav>
 
                 <div id="content">
-                    <section class="available_prod">
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-9 allowed_prod">
@@ -61,7 +60,6 @@
                                 </div>
                             </div>
                         </div>
-                    </section>
                     <section class="search_prod">
                         <form class="form-inline position-relative my-2 d-inline-block">
                             <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
