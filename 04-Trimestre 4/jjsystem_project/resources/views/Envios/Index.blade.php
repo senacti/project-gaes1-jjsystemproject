@@ -20,11 +20,11 @@
             </div>
                 <div class="menu">
                     <a href="#" class="d-block text-light font-weight-light">Inicio</a>
-                    <div class="a-selected">
-                        <a href="#" class="d-block text-light font-weight-light">Productos y Servicios</a>
-                    </div>                    
+                    <a href="#" class="d-block text-light font-weight-light">Productos y Servicios</a>                   
                     <a href="#" class="d-block text-light font-weight-light">Servicio Tecnico</a>
-                    <a href="#" class="d-block text-light font-weight-light">Envios</a>
+                    <div class="a-selected">
+                        <a href="#" class="d-block text-light font-weight-light">Envios</a>
+                    </div>
                     <a href="#" class="d-block text-light font-weight-light">PQRSF</a>
                     <a href="#" class="d-block text-light font-weight-light">Clientes</a>
                     <a href="#" class="d-block text-light font-weight-light">Tecnicos</a>
@@ -53,7 +53,6 @@
                 </nav>
 
                 <div id="content">
-                    <section class="available_prod">
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-9 allowed_prod">
@@ -61,7 +60,6 @@
                                 </div>
                             </div>
                         </div>
-                    </section>
                     <section class="search_prod">
                         <form class="form-inline position-relative my-2 d-inline-block">
                             <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
@@ -102,6 +100,7 @@
                             </tbody>
                         </table>
                         <a href="{{ url('envios/create') }}" class="btn btn-primary btn-sm">Añadir Envio</a>
+                        <a href="{{ route('export') }}" class="btn btn-success btn-sm">Exportar</a>
                     </section>
                 </div>
             </div>
