@@ -33,7 +33,7 @@
                     <a id="recuperarContraseña" href="../formularios/recuperarcontraseña.html">Olvide mi contraseña</a></li>
                 </div>
                 <div class="login-registrar">
-                  <a id="registrar" href="#">Registrarse</a></li>
+                  <a id="registrar" href="{{asset ('register')}}">Registrarse</a></li>
               </div>
               </div>
         </form>
