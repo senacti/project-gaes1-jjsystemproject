@@ -16,8 +16,8 @@ use App\Http\Controllers\ExportController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/home_admin',function(){
+    return view("home_admin");
 });
 
 Route::get('/Index', function () {

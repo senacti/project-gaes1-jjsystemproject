@@ -1,0 +1,90 @@
+:root  {
+    --primary: #263465;
+    --secondary: #4BACD1;
+    --light: #FFFFFF;
+}
+
+body{
+    font-family: 'Montserrat',  sans-serif;
+    color: var(--primary);
+    background-color: var(--primary);
+}
+
+.content{
+    background-color: var(--light);
+    margin: 5rem;
+    border-radius: 1rem;
+}
+
+.content-title{
+    font-size: 1.8rem;
+    margin-left: 3rem;
+    padding-top: .5rem;
+}
+
+.content-first-row{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.content-second-row{
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+}
+
+.content-third-row{
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 4rem;
+}
+
+a{
+    text-decoration: none;
+    animation: none;
+    cursor: auto;
+}
+
+.btn{
+    background-color: var(--secondary);
+    border: none;
+    font-size: 1.4rem;
+    border-radius: 2rem;
+    color: var(--light);
+    text-align: justify;
+    cursor: pointer;
+}
+
+.prod-services{
+    padding: 1rem 3rem;
+    margin-right: 3rem;
+}
+
+.tech-service{
+    padding: 1rem 4rem;
+    margin-right: 3rem;
+}
+
+.shipments{
+    padding: 2rem 4.5rem;
+}
+
+.employees{
+    padding: 2rem 3rem;
+    margin-right: 3rem;
+}
+
+.customers{
+    padding: 2rem 4rem;
+    margin-right: 3rem;
+}
+
+.pqrsf{
+    padding: 2rem 4.3rem;
+}
+
+.settings{
+    padding: 2rem 4.3rem;
+}
