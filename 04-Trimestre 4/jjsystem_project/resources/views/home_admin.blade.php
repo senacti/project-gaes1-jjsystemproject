@@ -2,8 +2,8 @@
 <html lang="es">
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="{{asset ('css/camaras.css')}}" >
-    <link rel="stylesheet" href="{{asset ('css/normalize.css')}}">
+    <link rel="stylesheet" href="{{asset('css/home_admin.css')}}">
+    <link rel="stylesheet" href="{{asset('css/normalize.css')}}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
@@ -16,7 +16,7 @@
                 <h1 class="font-weight-bold">J.J System</h1>
         </section>
         <section class="content-first-row">
-            <a href="{{asset ('gestion_productos')}}">
+            <a href="{{asset('gestion_productos')}}">
                 <button class="btn prod-services">
                     <h3>Productos <br> y Servicios</h3>
                 </button>
