@@ -23,7 +23,7 @@ body{
 }
 
 .content-first-row{
-    margin-top: 2rem;
+    margin-top: 5rem;
     display: flex;
     justify-content: center;
 }
@@ -58,33 +58,33 @@ a{
 }
 
 .prod-services{
-    padding: 1rem 3rem;
-    margin-right: 3rem;
-}
-
-.tech-service{
-    padding: 1rem 4rem;
-    margin-right: 3rem;
-}
-
-.shipments{
-    padding: 2rem 4.5rem;
-}
-
-.employees{
     padding: 2rem 3rem;
     margin-right: 3rem;
 }
 
-.customers{
+.tech-service{
     padding: 2rem 4rem;
     margin-right: 3rem;
 }
 
+.shipments{
+    padding: 3rem 4.5rem;
+}
+
+.employees{
+    padding: 3rem 3rem;
+    margin-right: 3rem;
+}
+
+.customers{
+    padding: 3rem 4rem;
+    margin-right: 3rem;
+}
+
 .pqrsf{
-    padding: 2rem 4.3rem;
+    padding: 3rem 4.3rem;
 }
 
 .settings{
-    padding: 2rem 4.3rem;
+    padding: 3rem 4.3rem;
 }
