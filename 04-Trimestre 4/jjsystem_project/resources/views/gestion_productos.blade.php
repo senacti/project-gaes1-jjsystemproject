@@ -23,7 +23,7 @@
                 <h2 class="text-light font-weight-bold">J.J System</h2>
             </div>
                 <div class="menu">
-                    <a href="#" class="d-block text-light font-weight-light">Inicio</a>
+                    <a href="{{asset('home_admin')}}" class="d-block text-light font-weight-light">Inicio</a>
                     <div class="a-selected">
                         <a href="{{asset('gestion_productos')}}" class="d-block text-light font-weight-light">Productos y Servicios</a>
                     </div>                    
