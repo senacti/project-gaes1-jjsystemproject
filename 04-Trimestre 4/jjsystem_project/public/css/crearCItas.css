@@ -1,0 +1,183 @@
+:root  {
+    --primary: rgba(19, 46, 67, 1);
+    --light: #FFFFFF;
+}
+
+body{
+    overflow: hidden;
+    font-family: 'Montserrat',  sans-serif;
+    color: var(--primary);
+}
+
+.bg-primary {
+    background-color: var(--primary) !important;
+}
+
+.bg-light {
+    background-color: var(--light) !important;
+}
+
+#sidebar-container {
+    min-height: 100vh;
+}
+
+#sidebar-container .logo {
+    text-align: center;
+    font-weight: bold;
+    padding: 0 1.5rem;
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+}
+
+#sidebar-container .menu{
+    width: 18rem;
+}
+
+.menu a{
+    background-color: #0C3759;
+    padding: 1rem 1rem;
+    margin: 2rem;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 2rem;
+    transition: all 0.3s linear;
+}
+
+.menu a:hover{
+    background-color:#018ABE;
+}
+
+.a-selected a{
+    padding: 0;
+    margin: 0;
+    padding: 1rem 1rem;
+    padding-right: 2.5rem;
+    margin-left: 2rem;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 2rem 0rem 0rem 2rem;
+    transition: none;
+    background-color:#018ABE;
+}
+
+.a-selected a:hover{
+    background-color: none;
+}
+
+.navbar{
+    border-bottom:#000000;
+}
+
+nav{
+    color: #02457A;
+}
+
+.profile{
+    margin-right: 2rem;
+}
+
+.greetings{
+    margin: 1rem 2rem;
+    font-weight: bold;
+}
+
+.border-bottom{
+    color: #000000;
+}
+
+.navbar-light .navbar-nav .nav-link{
+    color: #000000;
+}
+
+.dropdown-item{
+    color: #000000;
+}
+
+.avatar{
+    max-width: 35px;
+}
+
+#content{
+    overflow-y: auto;
+    height: 100vh;
+    padding-bottom: 5rem;
+}
+
+.available_prod{
+    display: flex;
+    padding: 1%;
+    width: 100%;
+}
+
+.btn-create{
+    width: 12rem;
+    padding: 9px;
+    border-radius: 30px;
+    margin-top: 1%;
+    margin-left: 45%;
+    margin-bottom: 3%;
+}
+.allowed_prod{
+    display: flex;
+    background-color: #0C3759;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: white;
+    padding: 1%;
+    width: 70%;
+    border-radius: 10px;
+    position: relative;
+}
+.container-citas{
+    padding-top: 5%;
+    padding-left: 8%;
+    padding-right: 8%;
+    margin: 3%;
+}
+.cita{
+    padding: 2%;
+    width: 100%;
+    height: 10%;
+    margin: 1%;
+    border-radius: 6px;
+    border-bottom: 1px solid#818181;
+    background-color: rgba(244, 250, 255, 1);
+    flex-shrink: 0;
+}
+.cita:hover{
+    box-shadow: 2px 2px 4px 2px #6d6666;
+}
+.boton-estado{
+    border: none;
+    padding: 10px;
+    margin-top: 3px;
+    margin:2%;
+    color:#000000;
+    background-color: #FFFFFF;
+    transition: background 0.3s ease;
+}
+.boton-estado:hover{
+    background: #018ABE;
+    box-shadow: 1px 1px 3px 0px #02457A;
+    color:#FFFFFF;
+}
+
+.modal-content{
+    background-color: #0C3759;
+    color: #FFFFFF;
+}
+.modal-title{
+    color: #FFFFFF;
+}
+.btn-cancelar {
+    background-color: rgb(136, 21, 21);
+    padding: 11px;
+    border-radius: 50px;
+    border: none;
+    margin-bottom: 2%;
+    width: 12rem;
+}
+.btn-cancelar:hover{
+    background-color: rgb(107, 25, 25);
+}
