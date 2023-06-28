@@ -22,7 +22,7 @@
                     <h3>Productos <br> y Servicios</h3>
                 </button>
             </a>
-            <a href="">
+            <a href="{{asset('Citas.indexST')}}">
                 <button class="btn tech-service">
                     <h3>Servicio <br> Técnico</h3>
                 </button>

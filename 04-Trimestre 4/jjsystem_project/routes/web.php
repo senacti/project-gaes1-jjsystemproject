@@ -41,7 +41,11 @@ Route::get('/visualizacion_producto', function () {
 Route::get('/cotizacion', function () {
     return view("cotizacion");
 });
-
+//servicio Tecnico
+Route::get('/Citas.indexST',function(){
+    return view("Citas.indexST");
+});
+//
 Route::get('/envioscliente', function () {
     return view("EnviosCliente_dashboard");
 });
