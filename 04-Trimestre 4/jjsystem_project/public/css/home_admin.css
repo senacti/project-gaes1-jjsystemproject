@@ -1,90 +1,91 @@
-:root  {
-    --primary: #263465;
+:root {
+    --primary: #0C3759;
     --secondary: #4BACD1;
     --light: #FFFFFF;
 }
 
-body{
-    font-family: 'Montserrat',  sans-serif;
-    color: var(--primary);
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--light);
     background-color: var(--primary);
+    margin: 0;
 }
 
-.content{
-    background-color: var(--light);
+.content {
     margin: 5rem;
     border-radius: 1rem;
+    padding: 2rem;
 }
 
-.content-title{
-    font-size: 1.8rem;
-    margin-left: 3rem;
-    padding-top: .5rem;
+.content-title {
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
-.content-first-row{
-    margin-top: 5rem;
+.logo-container {
     display: flex;
+    align-items: center;
     justify-content: center;
 }
 
-.content-second-row{
-    margin-top: 4rem;
-    display: flex;
-    justify-content: center;
+.logo-container h1 {
+    margin: 0;
+    color: var(--light);
 }
 
-.content-third-row{
-    margin-top: 4rem;
-    display: flex;
-    justify-content: center;
-    padding-bottom: 4rem;
+.admin-greeting {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 1rem;
 }
 
-a{
+.content-first-row,
+.content-second-row,
+.content-third-row {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+a {
     text-decoration: none;
     animation: none;
     cursor: auto;
 }
 
-.btn{
-    background-color: var(--secondary);
+.btn {
+    background-color: var(--light);
     border: none;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     border-radius: 2rem;
-    color: var(--light);
-    text-align: justify;
+    color: var(--primary);
+    text-align: center;
     cursor: pointer;
+    margin: 1rem;
+    padding: 1.5rem 4rem;
+    transition: all 0.3s ease;
 }
 
-.prod-services{
-    padding: 2rem 3rem;
-    margin-right: 3rem;
+.btn:hover {
+    background-color: var(--secondary);
+    color: var(--light);
+    transform: scale(1.05);
 }
 
-.tech-service{
-    padding: 2rem 4rem;
-    margin-right: 3rem;
+@media only screen and (max-width: 600px) {
+    .btn {
+        width: 100%;
+    }
 }
 
-.shipments{
-    padding: 3rem 4.5rem;
-}
-
-.employees{
-    padding: 3rem 3rem;
-    margin-right: 3rem;
-}
-
-.customers{
-    padding: 3rem 4rem;
-    margin-right: 3rem;
-}
-
-.pqrsf{
-    padding: 3rem 4.3rem;
-}
-
-.settings{
-    padding: 3rem 4.3rem;
+@media only screen and (max-width: 768px) {
+    .content {
+        margin: 2rem;
+    }
+    
+    .btn {
+        padding: 1.2rem 3rem;
+        font-size: 1rem;
+    }
 }
