@@ -18,7 +18,6 @@ Route::get('/', function () {
     return view('/layout/welcome');
 });
 
-<<<<<<< HEAD
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -30,10 +29,6 @@ Route::middleware(['auth'])->group(function(){
     Route::resource('/Citas', citaController::class);
     Route::resource('/envios', EnvioController::class);
     Route::get('export', [ExportController::class, 'export'])->name('export');
-=======
-Route::get('/home_admin', function () {
-    return view('home_admin');
->>>>>>> c97b45146d31c0a14088ad8c6ca22c4f0a689cc5
 });
 
 Route::get('/Index', function () {
