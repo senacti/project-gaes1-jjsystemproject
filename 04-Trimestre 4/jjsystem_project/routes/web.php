@@ -16,7 +16,7 @@ use App\Http\Controllers\Auth\LoginRegisterController;
 */
 
 Route::get('/', function () {
-    return view('/layouts/welcome');
+    return view('/layout/welcome');
 });
 
 Auth::routes();
@@ -25,7 +25,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::middleware(['auth'])->group(function(){
     //RUTAS CRUD PRODUCTOS-Y-SERVICIOS
-    Route::resource('/Producto/indexProducto', ProductoController::class);
+    Route::resource('/Productos', ProductoController::class);
     //RUTAS CRUD SERVICIO-TECNICO-CITAS
     Route::resource('/Citas', citaController::class);
     Route::resource('/envios', EnvioController::class);

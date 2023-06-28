@@ -1,4 +1,4 @@
-@extends('layouts/template')
+@extends('layout/template')
 
 @section('title','Editar |Cita de Analisis')
 
