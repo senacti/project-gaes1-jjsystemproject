@@ -15,14 +15,13 @@
         <section class="content-title">
                 <h1 class="font-weight-bold">J.J System</h1>
         </section>
-        <p class="admin-greeting">¡Bienvenido, Admin!</p>
         <section class="content-first-row">
             <a href="{{asset('gestion_productos')}}">
                 <button class="btn prod-services">
                     <h3>Productos <br> y Servicios</h3>
                 </button>
             </a>
-            <a href="{{asset('Citas.indexST')}}">
+            <a href="">
                 <button class="btn tech-service">
                     <h3>Servicio <br> Técnico</h3>
                 </button>
