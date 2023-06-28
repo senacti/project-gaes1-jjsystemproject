@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pqrsf - J.J System</title>
-    <link rel="stylesheet" href="{{asset('CSS/pqrsf.css')}}">
+    <title>Visualización Pqrsf - J.J System</title>
+    <link rel="stylesheet" href="{{asset('CSS/visualizacionPqrsf.css')}}">
     <link rel="stylesheet" href="{{asset('CSS/normalize.css')}}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -104,7 +104,7 @@
                     
                 <div class="quejas_info_2">
                         
-                    <h2>Quejas</h2>
+                    <h2>Quejas</h2><br>
                     
                     <p>Expresión o manifestación por inconformidad que presenta <br>
                     el usuario con alguna prestación de nuestros servicios, <br>

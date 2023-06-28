@@ -3,6 +3,9 @@
 use App\Http\Controllers\citaController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginRegisterController;
+use App\Http\Controllers\Auth\FormularioPqrsfController;
+use App\Http\Controllers\EnvioController;
+use App\Http\Controllers\ExportController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -84,3 +87,30 @@ Route::get('/formulariopqrsf',function(){
 });
 
 
+
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Auth::routes();
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//RUTAS CRUD COTIZACIONES 
+
+Route::get('/cotizaciones', 'cotizacionController@index')->name('cotizaciones.index');
+Route::get('/cotizaciones/create', 'cotizacionController@create')->name('cotizaciones.create');
+Route::get('/cotizaciones', 'cotizacionController@store')->name('cotizaciones.store');
+Route::get('/cotizaciones/{id}', 'cotizacionController@show')->name('cotizaciones.show');
+Route::get('/cotizaciones/{id}/edit', 'ProductoController@edit')->name('cotizaciones.edit');
+Route::put('/cotizaciones/{id}', 'ProductoController@update')->name('cotizaciones.update');
+Route::delete('/cotizaciones/{id}', 'ProductoController@destroy')->name('cotizaciones.destroy');
+
+
+Route::resource('/envios', EnvioController::class);
+
+
+Route::get('export', [ExportController::class, 'export'])->name('export');
