@@ -2,9 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginRegisterController;
-use App\Http\Controllers\Auth\FormularioPqrsfController;
 use App\Http\Controllers\EnvioController;
 use App\Http\Controllers\ExportController;
+use App\Http\Controllers\PqrsfController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -56,6 +56,14 @@ Route::get('/formulariopqrsf',function(){
     return view("formulariopqrsf");
 });
 
+Route::get('/visualizacionPqrsf',function(){
+    return view("visualizacionPqrsf");
+});
+
+Route::get('/registrospqrsf',function(){
+    return view("registrospqrsf");
+});
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Auth::routes();
@@ -82,3 +90,16 @@ Route::resource('/envios', EnvioController::class);
 
 
 Route::get('export', [ExportController::class, 'export'])->name('export');
+
+
+//RUTAS CRUD PQRSF
+
+Route::resource('Pqrsf/registrospqrsf', PqrsfController::class);
+
+Route::get('/pqrsf/create',function(){
+    return view("Pqrsf/create");
+});
+
+Route::get('/pqrsf/index',function(){
+    return view("Pqrsf/index");
+});

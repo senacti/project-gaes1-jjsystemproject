@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pqrsf - J.J System</title>
-    <link rel="stylesheet" href="{{asset('CSS/pqrsf.css')}}">
+    <title>Visualización Pqrsf - J.J System</title>
+    <link rel="stylesheet" href="{{asset('CSS/visualizacionPqrsf.css')}}">
     <link rel="stylesheet" href="{{asset('CSS/normalize.css')}}">
 </head>
 
@@ -89,7 +89,7 @@
             </div>    
             
             <button>
-                    <a href="#"><h2>Agregar una petición</h2></a>
+                    <a href="{{ url('pqrsf/create') }}"><h2>Agregar una petición</h2></a>
             </button>    
         
         </div>
@@ -101,7 +101,7 @@
                     
                 <div class="quejas_info_2">
                         
-                    <h2>Quejas</h2>
+                    <h2>Quejas</h2><br>
                     
                     <p>Expresión o manifestación por inconformidad que presenta <br>
                     el usuario con alguna prestación de nuestros servicios, <br>
@@ -113,7 +113,7 @@
             </div>
             
             <button>
-                    <a href="#"><h2>Agregar una queja</h2></a>
+                    <a href="{{ url('pqrsf/create') }}"><h2>Agregar una queja</h2></a>
             </button>
         
         </div>
@@ -136,7 +136,7 @@
             </div>    
             
             <button>
-                    <a href="#"><h2>Agregar un reclamo</h2></a>
+                    <a href="{{ url('pqrsf/create') }}"><h2>Agregar un reclamo</h2></a>
             </button>
         
         </div>
@@ -159,7 +159,7 @@
             </div>    
             
             <button>
-                    <a href="#"><h2>Agregar una sugerencia</h2></a>
+                    <a href="{{ url('pqrsf/create') }}"><h2>Agregar una sugerencia</h2></a>
             </button>
         
         </div>
@@ -182,7 +182,7 @@
             </div>    
             
             <button>
-                    <a href="#"><h2>Agregar una felicitación</h2></a>
+                    <a href="{{ url('pqrsf/create') }}"><h2>Agregar una felicitación</h2></a>
             </button>
         
         </div>

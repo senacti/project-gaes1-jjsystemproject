@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\estadoPQRSF;
 use App\Models\Pqrsf;
+use App\Models\TipoPQRSF;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PqrsfController extends Controller
 {
@@ -12,7 +15,16 @@ class PqrsfController extends Controller
      */
     public function index()
     {
-        //
+
+        $pqrsfs = Pqrsf::all(); 
+        $tipos = TipoPQRSF::all();
+        $estados = estadoPQRSF::all();
+
+        return view('Pqrsf.create', compact('tipos', 'estados', 'pqrsfs'));
+
+       // $tipos = DB::select('SELECT * FROM estadoPQRSF');
+      //  $estados = DB::select('SELECT * FROM TipoPQRSF');
+      //  return view('Pqrsf/create', compact('tipos', 'estados', 'pqrsf'));
     }
 
     /**
@@ -20,7 +32,7 @@ class PqrsfController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -28,7 +40,23 @@ class PqrsfController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $request->validate([
+            
+            'fechaPQRSF' => 'required',
+            'informacionPQRSF' => 'required',
+            'TipoPQRSF_idTipoPQRSF' => 'required',
+            'EstadoPQRSF_idEstadoPQRSF' => 'required'
+        ]);
+
+        $pqrsf = new Pqrsf();
+        $pqrsf ->fechaPQRSF = $request->input('fechaPQRSF');
+        $pqrsf ->informacionPQRSF = $request->input('informacionPQRSF');
+        $pqrsf ->TipoPQRSF_idTipoPQRSF = $request->input('TipoPQRSF');
+        $pqrsf ->EstadoPQRSF_idEstadoPQRSF = $request->input('estadoPQRSF');
+        $pqrsf ->save();
+        
+        return view("Pqrsf.message", [ 'msg' => "Registro guardado"]);
     }
 
     /**
@@ -42,24 +70,45 @@ class PqrsfController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Pqrsf $pqrsf)
+    public function edit($idPQRSF)
     {
-        //
+        $Pqrsf = Pqrsf::find($idPQRSF);
+        return view('Pqrsf.edit', ['Pqrsf' => $Pqrsf, 'estados' => estadoPQRSF::all()]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Pqrsf $pqrsf)
+    public function update(Request $request, $idPQRSF)
     {
-        //
+        $request->validate([
+            
+            'fechaPQRSF' => 'required',
+            'informacionPQRSF' => 'required',
+            'idCliente' => 'required',
+            'TipoPQRSF_idTipoPQRSF' => 'required',
+            'EstadoPQRSF_idEstadoPQRSF' => 'required'
+        ]);
+
+        $pqrsf = Pqrsf::find($idPQRSF);
+        $pqrsf ->fechaPQRSF = $request->input('fechaPQRSF');
+        $pqrsf ->informacionPQRSF = $request->input('informacionPQRSF');
+        $pqrsf ->Cliente_idCliente = $request->input('Cliente_idCliente');
+        $pqrsf ->TipoPQRSF_idTipoPQRSF = $request->input('TipoPQRSF');
+        $pqrsf ->EstadoPQRSF_idEstadoPQRSF = $request->input('estadoPQRSF');
+        $pqrsf ->save();
+
+        return view("Pqrsf.message", [ 'msg' => "Registro editado"]);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Pqrsf $pqrsf)
+    public function destroy($idPQRSF)
     {
-        //
+        $Pqrsf = Pqrsf::find($idPQRSF);
+        $Pqrsf->delete();
+
+        return redirect("Pqrsf");    
     }
 }
