@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use Barryvdh\DomPDF\Facade\Pdf;
 use App\Models\cita;
 use App\Models\idTecnico;
 use Illuminate\Http\Request;
+
 
 class citaController extends Controller
 {
@@ -19,6 +21,11 @@ class citaController extends Controller
     /**
      * Show the form for creating a new resource.
      */
+    public function pdf(){
+        $citas=cita::all();
+        $pdf = Pdf::loadView('citas.pdf', compact('Citas'));
+        return $pdf->stream();
+    }
     public function create()
     {
         $citas = cita::all();
