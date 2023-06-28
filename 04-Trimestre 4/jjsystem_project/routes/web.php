@@ -15,7 +15,7 @@ use App\Http\Controllers\Auth\LoginRegisterController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('/layouts/welcome');
 });
 
 Route::get('/home_admin', function () {
