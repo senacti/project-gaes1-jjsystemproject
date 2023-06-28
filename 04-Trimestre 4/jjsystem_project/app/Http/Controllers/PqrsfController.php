@@ -16,11 +16,10 @@ class PqrsfController extends Controller
     public function index()
     {
 
-        $pqrsfs = Pqrsf::all(); 
-        $tipos = TipoPQRSF::all();
-        $estados = estadoPQRSF::all();
-
-        return view('Pqrsf.create', compact('tipos', 'estados', 'pqrsfs'));
+        $pqrsf = Pqrsf::all(); 
+        //$tipos = TipoPQRSF::all();
+        $tipos = TipoPQRSF::pluck('nombreTipoPQRSF', 'idTipoPQRSF')->all();
+        return view('Pqrsf.create', compact('tipos', 'pqrsf'));
 
        // $tipos = DB::select('SELECT * FROM estadoPQRSF');
       //  $estados = DB::select('SELECT * FROM TipoPQRSF');
@@ -42,18 +41,15 @@ class PqrsfController extends Controller
     {
 
         $request->validate([
-            
             'fechaPQRSF' => 'required',
             'informacionPQRSF' => 'required',
-            'TipoPQRSF_idTipoPQRSF' => 'required',
-            'EstadoPQRSF_idEstadoPQRSF' => 'required'
+            'TipoPQRSF_idTipoPQRSF' => 'required'
         ]);
 
         $pqrsf = new Pqrsf();
         $pqrsf ->fechaPQRSF = $request->input('fechaPQRSF');
         $pqrsf ->informacionPQRSF = $request->input('informacionPQRSF');
-        $pqrsf ->TipoPQRSF_idTipoPQRSF = $request->input('TipoPQRSF');
-        $pqrsf ->EstadoPQRSF_idEstadoPQRSF = $request->input('estadoPQRSF');
+        $pqrsf->TipoPQRSF_idTipoPQRSF = $request->input('TipoPQRSF_idTipoPQRSF');     
         $pqrsf ->save();
         
         return view("Pqrsf.message", [ 'msg' => "Registro guardado"]);
