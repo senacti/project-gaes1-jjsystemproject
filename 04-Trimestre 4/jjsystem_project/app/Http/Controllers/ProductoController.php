@@ -66,24 +66,47 @@ class ProductoController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Producto $producto)
+    public function edit($id)
     {
-        //
+        $Producto = Producto::find($id);
+        return view('Productos.edit', ['Producto' => $Producto, 'categoriaProductos' => categoriaProducto::all(), 'proveedorProductos' => proveedorProducto::all()]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Producto $producto)
+    public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'nombreProducto' => 'required',
+            'descripcionProducto' => 'required',
+            'precioProducto' => 'nullable',
+            'cantidad' => 'required',
+            'proveedorProducto' => 'required',
+            'categoriaProducto' => 'required',
+            
+        ]);
+
+        $Producto = Producto::find($id);
+        $Producto->nombreProducto = $request->input('nombreProducto');
+        $Producto->descripcionProducto = $request->input('descripcionProducto');
+        $Producto->precioProducto = $request->input('precioProducto');
+        $Producto->cantidad = $request->input('cantidad');
+        $Producto->idProveedorProducto = $request->input('proveedorProducto');
+        $Producto->idCategoriaProducto= $request->input('categoriaProducto');
+        $Producto->save();
+
+        return view("Productos.message", ['msg' => 'Producto guardado']);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Producto $producto)
+    public function destroy($id)
     {
-        //
+        $Producto = Producto::find($id);
+        $Producto->delete();
+
+        return redirect("Productos");
     }
 }

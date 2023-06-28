@@ -16,12 +16,4 @@ class Producto extends Model
     public function categoriaProducto(){
         return $this->belongsTo(categoriaProducto::class, 'idCategoriaProducto', 'id');
     }
-
-    public function administrador(){
-        return $this->belongsTo(administrador::class, 'idAdministrador', 'id');
-    }
-
-    public function cotizacion(){
-        return $this->belongsTo(cotizacion::class, 'idcotizacion', 'id');
-    }
 }

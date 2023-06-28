@@ -85,10 +85,16 @@
                                 <td>{{$Producto->descripcionProducto}}</td>
                                 <td>{{$Producto->precioProducto}}</td>
                                 <td>{{$Producto->cantidad}}</td>
-                                <td>{{$Producto->categoriaProductos->nombreCategoria}}</td>
-                                <td>{{$Producto->proveedorProductos->nombreProveedor}}</td>
-                                <td class="icon"><a href="#"><img src="{{asset('images/iconos/edit.png')}}" alt="Modificar"></a></td>
-                                <td><a href="#"><img src="{{asset('images/iconos/delete.png')}}" alt="Editar"></a></td>
+                                <td>{{$Producto->categoriaProducto->nombreCategoria}}</td>
+                                <td>{{$Producto->proveedorProducto->nombreProveedor}}</td>
+                                <td class="icon"><a href="{{url('Productos/'.$Producto->id.'/edit')}}"><img src="{{asset('images/iconos/edit.png')}}" alt="Modificar"></a></td>
+                                <td>
+                                    <form action="{{url('Productos/'.$Producto->id)}}" method="POST">
+                                        @method("DELETE")
+                                        @csrf
+                                        <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+                                    </form>
+                                </td>
                             </tr>
                         @endforeach
                         </tbody>
