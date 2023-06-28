@@ -31,7 +31,11 @@ class PqrsfController extends Controller
      */
     public function create()
     {
+        $pqrsfs = Pqrsf::all(); 
+        $tipos = TipoPQRSF::all();
+        $estados = estadoPQRSF::all();
 
+        return view('Pqrsf.create', compact('tipos', 'estados', 'pqrsfs'));
     }
 
     /**
