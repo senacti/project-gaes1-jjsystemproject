@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\proveedorproductos;
+use App\Models\proveedorProducto;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class ProveedorproductosController extends Controller
+class ProveedorProductoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -35,7 +35,7 @@ class ProveedorproductosController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(proveedorproductos $proveedorproductos)
+    public function show(proveedorProducto $proveedorProducto)
     {
         //
     }
@@ -43,7 +43,7 @@ class ProveedorproductosController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(proveedorproductos $proveedorproductos)
+    public function edit(proveedorProducto $proveedorProducto)
     {
         //
     }
@@ -51,7 +51,7 @@ class ProveedorproductosController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, proveedorproductos $proveedorproductos)
+    public function update(Request $request, proveedorProducto $proveedorProducto)
     {
         //
     }
@@ -59,7 +59,7 @@ class ProveedorproductosController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(proveedorproductos $proveedorproductos)
+    public function destroy(proveedorProducto $proveedorProducto)
     {
         //
     }

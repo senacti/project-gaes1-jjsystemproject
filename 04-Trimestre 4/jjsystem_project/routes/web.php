@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\citaController;
+use App\Http\Controllers\ProductoController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginRegisterController;
 /*
