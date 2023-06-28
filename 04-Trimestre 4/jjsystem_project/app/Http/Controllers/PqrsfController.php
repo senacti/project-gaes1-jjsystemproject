@@ -16,11 +16,7 @@ class PqrsfController extends Controller
     public function index()
     {
 
-        $pqrsfs = Pqrsf::all(); 
-        $tipos = TipoPQRSF::all();
-        $estados = estadoPQRSF::all();
-
-        return view('Pqrsf.create', compact('tipos', 'estados', 'pqrsfs'));
+        return view('Pqrsf.index', compact('tipos', 'estados', 'pqrsfs'));
 
        // $tipos = DB::select('SELECT * FROM estadoPQRSF');
       //  $estados = DB::select('SELECT * FROM TipoPQRSF');
@@ -32,7 +28,11 @@ class PqrsfController extends Controller
      */
     public function create()
     {
+        $pqrsfs = Pqrsf::all(); 
+        $tipos = TipoPQRSF::all();
+        $estados = estadoPQRSF::all();
 
+        return view('Pqrsf.create', compact('tipos', 'estados', 'pqrsfs'));
     }
 
     /**

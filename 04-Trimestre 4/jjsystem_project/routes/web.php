@@ -123,6 +123,6 @@ Route::get('/pqrsf/create',function(){
     return view("Pqrsf/create");
 });
 
-Route::get('/pqrsf/index',function(){
+Route::get('/pqrsf',function(){
     return view("Pqrsf/index");
 });
