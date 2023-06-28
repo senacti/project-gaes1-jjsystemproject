@@ -4,6 +4,9 @@ use App\Http\Controllers\citaController;
 use App\Http\Controllers\ProductoController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginRegisterController;
+use App\Http\Controllers\EnvioController;
+use App\Http\Controllers\ExportController;
+use App\Http\Controllers\PqrsfController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,7 +25,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
+Route::get('/Citas/pdf', [citaController::class, 'pdf'])->name('Citas.pdf');
 Route::middleware(['auth'])->group(function(){
     //RUTAS CRUD PRODUCTOS-Y-SERVICIOS
     Route::resource('/Productos', ProductoController::class);
@@ -82,4 +85,45 @@ Route::get('/añadir_producto',function(){
 
 Route::get('/formulariopqrsf',function(){
     return view("formulariopqrsf");
+});
+
+Route::get('/visualizacionPqrsf',function(){
+    return view("visualizacionPqrsf");
+});
+
+Route::get('/registrospqrsf',function(){
+    return view("registrospqrsf");
+});
+
+
+
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Auth::routes();
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+
+
+Route::resource('/envios', EnvioController::class);
+
+
+Route::get('export', [ExportController::class, 'export'])->name('export');
+
+//RUTAS CRUD PQRSF
+
+Route::resource('Pqrsf/registrospqrsf', PqrsfController::class);
+
+Route::get('/Pqrsf/create',function(){
+    return view("Pqrsf/create");
+});
+
+Route::get('/pqrsf/index',function(){
+    return view("Pqrsf/index");
 });
