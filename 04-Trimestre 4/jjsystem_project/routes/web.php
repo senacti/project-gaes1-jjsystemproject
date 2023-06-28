@@ -82,25 +82,3 @@ Route::get('/añadir_producto',function(){
 Route::get('/formulariopqrsf',function(){
     return view("formulariopqrsf");
 });
-
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Auth::routes();
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-//RUTAS CRUD SERVICIO-TECNICO-CITAS
-
-Route::resource('/Citas', citaController::class);
-//Route::get('cita',[citaController::class,'index']);
-//Route::put('Citas/{idCita}', 'CitasController@update')->name('Citas.update');
-
-
-
-Route::resource('/envios', EnvioController::class);
-Route::get('export', [ExportController::class, 'export'])->name('export');
