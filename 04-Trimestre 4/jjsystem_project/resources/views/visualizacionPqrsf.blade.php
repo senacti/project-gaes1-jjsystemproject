@@ -8,6 +8,9 @@
     <title>Visualización Pqrsf - J.J System</title>
     <link rel="stylesheet" href="{{asset('CSS/visualizacionPqrsf.css')}}">
     <link rel="stylesheet" href="{{asset('CSS/normalize.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" >
 </head>
 
 <body>

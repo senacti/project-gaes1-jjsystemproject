@@ -8,6 +8,9 @@
     <title>Análisis - J.J System</title>
     <link href="{{asset("CSS/servicio_analisis.css")}}" rel="stylesheet">
     <link href="{{asset("CSS/normalize.css")}}" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" >
 </head>
 
 <body>

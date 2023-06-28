@@ -17,18 +17,18 @@
                 @csrf
                 <div class="Datos">
                     <div class="Input-datos-formularios">
-                        <label for="NumeroDocumento">Numero de documento</label>
-                        <input type="number" id="NumeroDocumento" name="NumeroDocumento" required/>
+                        <label for="numeroDocumento">Numero de documento</label>
+                        <input type="number" id="numeroDocumento" name="numeroDocumento" required/>
                         <label>Nombre</label>
-                        <input type="text" id="Nombre" name="Nombre" required/>
+                        <input type="text" id="Nombre" name="nombre" required/>
                         <label>Apellido</label>
-                        <input type="text" id="Apellido" name="Apellido" required/>
+                        <input type="text" id="Apellido" name="apellido" required/>
                         <label>Email</label>
                         <input type="email" class="input" name="email">
                         <label>Contraseña</label>
-                        <input type="password" class="input" name="password" required id="password1">
-                        <label>Numero de teléfono</label>
-                        <input type="number" id="NumeroTelefono" name="NumeroContacto" required max=""/>
+                        <input type="password" class="input" name="password" required id="password">
+                        <label>Numero de Contacto</label>
+                        <input type="number" id="numeroContacto" name="numeroContacto" required max=""/>
 
                         <div class="check-botton">
                             <input type="radio" name="AceptaTerminos" id="AceptaTerminos" required/>
@@ -38,7 +38,7 @@
                             <input type="submit" value="Registrarse" id="link-registrarse">
                         </div>
                         <div class="login-registrar">
-                            <a id="login" href="">Iniciar Sesion</a>
+                            <a id="login" href="{{asset ('login')}}">Iniciar Sesion</a>
                         </div>
                     </div>
                 </div>
@@ -46,7 +46,7 @@
         </div>
     </div>
 
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  </body>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+</body>
 </html>
 

@@ -8,6 +8,9 @@
     <title>Productos - J.J System</title>
     <link rel="stylesheet" href="{{asset ('css/venta_productos.css')}}">
     <link rel="stylesheet" href="{{asset ('css/normalize.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" >
 </head>
 
 <body>
@@ -16,7 +19,7 @@
         
         <div class="container logo-login-container">
             
-            <a href="../../HTML/landign_page/Index.html" class="logo">J.J SYSTEM</a>
+            <a href="{{asset ('Index')}}" class="logo">J.J SYSTEM</a>
             
             <nav class="login_navigation">
                 <ul>
@@ -78,7 +81,7 @@
                     <p>Camara IPC-HFW5842E-ASE <br> 8MP IR Fixed-focal Bullet <br> WizMind</p>
                 </a>
                 
-                <a href="../../HTML/landign_page/camaras.html">
+                <a href="{{asset ('camaras')}}">
                     <h2 class="show_more">Ver más</h2>
                 </a>
 
@@ -102,7 +105,7 @@
                     <p>DVR 4 Canales 4MP Lite  <br> HIKVISION - Q644.00</p>
                 </a>
                 
-                <a href="../../HTML/landign_page/camaras.html">
+                <a href="{{asset ('camaras')}}">
                     <h2 class="show_more">Ver más</h2>
                 </a>
             
@@ -126,7 +129,7 @@
                     <p>Alarma Hikvision DS-PWA48 <br> KIT-WB</p>    
                 </a>
 
-                <a href="../../HTML/landign_page/camaras.html">
+                <a href="{{asset ('camaras')}}">
                     <h2 class="show_more">Ver más</h2>
                 </a>
             
@@ -150,7 +153,7 @@
                     <p>Sensor de movimiento tipo <br> PIR inalambrico HIKVISION <br> DS-PD2-P10P-W</p>
                 </a>
                 
-                <a href="../../HTML/landign_page/camaras.html">
+                <a href="{{asset ('camaras')}}">
                     <h2 class="show_more">Ver más</h2>
                 </a>
             </div>

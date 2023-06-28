@@ -8,6 +8,9 @@
     <title>Visualización de producto - J.J System</title>
     <link href="{{asset("CSS/visualizacion_producto.css")}}" rel="stylesheet">
     <link href="{{asset("CSS/normalize.css")}}" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" >
 </head>
 
 <body>
@@ -16,14 +19,14 @@
         
         <div class="container logo-login-container">
             
-            <a href="../../HTML/landign_page/Index.html" class="logo">J.J SYSTEM</a>
+            <a href="{{asset ('Index')}}" class="logo">J.J SYSTEM</a>
             
             <nav class="login_navigation">
                 
                 <ul>
                     <li><a href="../../HTML/formularios/registro.html">Registrarse</a></li>
                     <li><a href="../../HTML/formularios/login.html">Iniciar sesión</a></li>
-                    <li><a href="#"><img class="user_img" src="../../images/ft perfil.png" alt="Foto de perfil"></a></li>
+                    <li><a href="#"><img class="user_img" src="{{ asset('images/fotoperfil.png')}}" alt="Foto de perfil"></a></li>
                 </ul>
                 
             </nav>    
@@ -119,7 +122,7 @@
                     <div class="product_buttons">
 
                         <button><a href="#"><h3>Agregar a lista de cotización</h3></button></a>
-                        <button><a href="../../HTML/landign_page/cotización.html"><h3>Ver cotización</h3></button></a>
+                        <button><a href="{{asset('cotizacion')}}"><h3>Ver cotización</h3></button></a>
 
                     </div>
 

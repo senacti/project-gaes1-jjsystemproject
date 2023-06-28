@@ -8,6 +8,9 @@
     <title>Camaras - J.J System</title>
     <link rel="stylesheet" href="{{asset ('css/camaras.css')}}">
     <link rel="stylesheet" href="{{asset ('css/normalize.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" >
 </head>
 
 <body>
@@ -16,7 +19,7 @@
         
         <div class="container logo-login-container">
             
-            <a href="../../HTML/landign_page/Index.html" class="logo">J.J SYSTEM</a>
+            <a href="{{asset ('Index')}}" class="logo">J.J SYSTEM</a>
             
             <nav class="login_navigation">
                 <ul>
@@ -39,7 +42,7 @@
 
             <div class="products_offered">
                 <a
-                    href="/HTML/landign_page/visualizacion_producto.html"><img class="camara_sample_1" src="../../images/product_images/camara_uno.png" alt="Camara">
+                    href="{{asset ('visualizacion_producto')}}"><img class="camara_sample_1" src="../../images/product_images/camara_uno.png" alt="Camara">
                     <p>Camara iBall 2.0 MP HD IR <br> DOME IP CAMERA (IB-<br>IPD202PM)</p>
                 </a>
                 

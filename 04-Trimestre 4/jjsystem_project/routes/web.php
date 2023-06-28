@@ -1,10 +1,11 @@
 <?php
 
+use App\Http\Controllers\citaController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginRegisterController;
+use App\Http\Controllers\Auth\FormularioPqrsfController;
 use App\Http\Controllers\EnvioController;
 use App\Http\Controllers\ExportController;
-use App\Http\Controllers\PqrsfController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,7 +18,20 @@ use App\Http\Controllers\PqrsfController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('/layout/welcome');
+});
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::middleware(['auth'])->group(function(){
+    //RUTAS CRUD PRODUCTOS-Y-SERVICIOS
+    Route::resource('/Productos', ProductoController::class);
+    //RUTAS CRUD SERVICIO-TECNICO-CITAS
+    Route::resource('/Citas', citaController::class);
+    Route::resource('/envios', EnvioController::class);
+    Route::get('export', [ExportController::class, 'export'])->name('export');
 });
 
 Route::get('/Index', function () {
@@ -32,6 +46,18 @@ Route::get('/camaras', function () {
     return view("camaras");
 });
 
+Route::get('/visualizacion_producto', function () {
+    return view("visualizacion_producto");
+});
+
+Route::get('/cotizacion', function () {
+    return view("cotizacion");
+});
+//servicio Tecnico
+Route::get('/Citas.indexST',function(){
+    return view("Citas.indexST");
+});
+//
 Route::get('/envioscliente', function () {
     return view("EnviosCliente_dashboard");
 });
@@ -52,16 +78,12 @@ Route::get('/gestion_productos',function(){
     return view("gestion_productos");
 });
 
+Route::get('/añadir_producto',function(){
+    return view("añadir_producto");
+});
+
 Route::get('/formulariopqrsf',function(){
     return view("formulariopqrsf");
-});
-
-Route::get('/visualizacionPqrsf',function(){
-    return view("visualizacionPqrsf");
-});
-
-Route::get('/registrospqrsf',function(){
-    return view("registrospqrsf");
 });
 
 
@@ -90,16 +112,3 @@ Route::resource('/envios', EnvioController::class);
 
 
 Route::get('export', [ExportController::class, 'export'])->name('export');
-
-
-//RUTAS CRUD PQRSF
-
-Route::resource('Pqrsf/registrospqrsf', PqrsfController::class);
-
-Route::get('/pqrsf/create',function(){
-    return view("Pqrsf/create");
-});
-
-Route::get('/pqrsf/index',function(){
-    return view("Pqrsf/index");
-});

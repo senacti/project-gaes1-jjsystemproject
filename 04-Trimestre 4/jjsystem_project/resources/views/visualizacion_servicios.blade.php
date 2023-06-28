@@ -8,6 +8,9 @@
     <title>Camaras - J.J System</title>
     <link href="{{asset("CSS/visualizacion_servicios.css")}}" rel="stylesheet">
     <link href="{{asset("CSS/normalize.css")}}" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" >
 </head>
 
 <body>
@@ -16,7 +19,7 @@
         
         <div class="container logo-login-container">
             
-            <a href="../../HTML/landign_page/Index.html" class="logo">J.J SYSTEM</a>
+            <a href="{{asset ('Index')}}" class="logo">J.J SYSTEM</a>
             
             <nav class="login_navigation">
                 <ul>
