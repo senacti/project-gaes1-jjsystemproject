@@ -21,7 +21,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
+Route::get('/Citas/pdf', [citaController::class, 'pdf'])->name('Citas.pdf');
 Route::middleware(['auth'])->group(function(){
     //RUTAS CRUD PRODUCTOS-Y-SERVICIOS
     Route::resource('/Productos', ProductoController::class);
@@ -104,3 +104,4 @@ Route::resource('/Citas', citaController::class);
 
 Route::resource('/envios', EnvioController::class);
 Route::get('export', [ExportController::class, 'export'])->name('export');
+
