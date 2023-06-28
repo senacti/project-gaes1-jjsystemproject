@@ -15,6 +15,7 @@
         <section class="content-title">
                 <h1 class="font-weight-bold">J.J System</h1>
         </section>
+        <p class="admin-greeting">¡Bienvenido, Admin!</p>
         <section class="content-first-row">
             <a href="{{asset('gestion_productos')}}">
                 <button class="btn prod-services">
