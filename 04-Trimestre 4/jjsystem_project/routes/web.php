@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\citaController;
 use Illuminate\Support\Facades\Route;
+use APP\Http\Controllers\ProductoController;
+use App\Http\Controllers\citaController;
 use App\Http\Controllers\Auth\LoginRegisterController;
 /*
 |--------------------------------------------------------------------------
@@ -18,12 +19,36 @@ Route::get('/', function () {
     return view('/layouts/welcome');
 });
 
-Route::get('/home_admin', function () {
-    return view('home_admin');
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::middleware(['auth'])->group(function(){
+    //RUTAS CRUD PRODUCTOS-Y-SERVICIOS
+    Route::resource('/Producto/indexProducto', ProductoController::class);
+    //RUTAS CRUD SERVICIO-TECNICO-CITAS
+    Route::resource('/Citas', citaController::class);
+    Route::resource('/envios', EnvioController::class);
+    Route::get('export', [ExportController::class, 'export'])->name('export');
 });
+
+//Route::get('cita',[citaController::class,'index']);
+//Route::put('Citas/{idCita}', 'CitasController@update')->name('Citas.update');
 
 Route::get('/Index', function () {
     return view("Index");
+});
+
+Route::get('/recuperarContraseña',function(){
+    return view("recuperarContraseña");
+});
+
+Route::get('/recuperarContraseña2',function(){
+    return view("recuperarContraseñaPaso2");
+});
+
+Route::get('/recuperarContraseña3',function(){
+    return view("recuperarContraseñaPaso3");
 });
 
 Route::get('/venta_productos', function () {
@@ -50,48 +75,7 @@ Route::get('/envioscliente', function () {
     return view("EnviosCliente_dashboard");
 });
 
-Route::get('/recuperarContraseña',function(){
-    return view("recuperarContraseña");
-});
-
-Route::get('/recuperarContraseña2',function(){
-    return view("recuperarContraseñaPaso2");
-});
-
-Route::get('/recuperarContraseña3',function(){
-    return view("recuperarContraseñaPaso3");
-});
-
-Route::get('/gestion_productos',function(){
-    return view("gestion_productos");
-});
-
-Route::get('/añadir_producto',function(){
-    return view("añadir_producto");
-});
 
 Route::get('/formulariopqrsf',function(){
     return view("formulariopqrsf");
 });
-
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Auth::routes();
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-//RUTAS CRUD SERVICIO-TECNICO-CITAS
-
-Route::resource('/Citas', citaController::class);
-//Route::get('cita',[citaController::class,'index']);
-//Route::put('Citas/{idCita}', 'CitasController@update')->name('Citas.update');
-
-
-
-Route::resource('/envios', EnvioController::class);
-Route::get('export', [ExportController::class, 'export'])->name('export');
