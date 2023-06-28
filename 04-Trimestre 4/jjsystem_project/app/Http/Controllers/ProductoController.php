@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Producto;
-use App\Http\Controllers\Controller;
+use App\Models\proveedorProducto;
+use App\Models\categoriaProducto;
 use Illuminate\Http\Request;
 
 class ProductoController extends Controller
@@ -13,7 +14,8 @@ class ProductoController extends Controller
      */
     public function index()
     {
-        return view('Productos.indexProductos');
+        $Productos = Producto::all();
+        return view('Productos.indexProductos', ['Productos' => $Productos]);
     }
 
     /**
@@ -21,7 +23,9 @@ class ProductoController extends Controller
      */
     public function create()
     {
-        //
+        $categoriaProductos = categoriaProducto::all();
+        $proveedorProductos = proveedorProducto::all();
+        return view('Productos.create', ['categoriaProductos' => $categoriaProductos], ['proveedorProductos' => $proveedorProductos]);
     }
 
     /**
@@ -29,7 +33,26 @@ class ProductoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'nombreProducto' => 'required',
+            'descripcionProducto' => 'required',
+            'precioProducto' => 'nullable',
+            'cantidad' => 'required',
+            'proveedorProducto' => 'required',
+            'categoriaProducto' => 'required',
+            
+        ]);
+
+        $Producto = new Producto();
+        $Producto->nombreProducto = $request->input('nombreProducto');
+        $Producto->descripcionProducto = $request->input('descripcionProducto');
+        $Producto->precioProducto = $request->input('precioProducto');
+        $Producto->cantidad = $request->input('cantidad');
+        $Producto->idProveedorProducto = $request->input('proveedorProducto');
+        $Producto->idCategoriaProducto= $request->input('categoriaProducto');
+        $Producto->save();
+
+        return view("Productos.message", ['msg' => 'Producto guardado']);
     }
 
     /**

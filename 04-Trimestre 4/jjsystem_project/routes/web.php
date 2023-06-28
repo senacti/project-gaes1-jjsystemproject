@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\citaController;
+use App\Http\Controllers\ProductoController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginRegisterController;
 use App\Http\Controllers\EnvioController;
@@ -119,7 +120,7 @@ Route::get('export', [ExportController::class, 'export'])->name('export');
 
 Route::resource('Pqrsf/registrospqrsf', PqrsfController::class);
 
-Route::get('/pqrsf/create',function(){
+Route::get('/Pqrsf/create',function(){
     return view("Pqrsf/create");
 });
 

@@ -125,19 +125,7 @@
                         </select>
                     </div>
                 </div>
-                
-                <div class="mb-3 row">
-                    <label for="estadoPQRSF" class="col-sm-2 col-form-label">Estado Pqrsf</label>
-                    <div class="col-sm-5">
-                        <select name="estadoPQRSF" class="form-select" aria-label="Default select example">
-                            @isset($estados)
-                                @foreach($estados as $estadoPQRSF)
-                                    <option value="{{$estadoPQRSF->idEstadoPQRSF}}">{{$estadoPQRSF->nombreEstadoPQRSF}}</option>
-                                @endforeach
-                            @endisset
-                        </select>
-                    </div>
-                </div>        
+                      
 
     <a href="{{ url('pqrsf/index') }}" class="btn btn-secondary">Regresar</a>
     <a href="{{ url('pqrsf/registrospqrsf') }}" class="btn btn-secondary">Guardar</a>

@@ -151,6 +151,15 @@ input, textarea{
     outline: none;
 }
 
+select{
+    padding: 1rem 1rem;
+    margin-bottom: 1.5rem;
+    background-color: var(--light);
+    border: 0;
+    border-radius: 1rem;
+    outline: none;
+}
+
 .btn{
     margin-left: 40%;
     margin-right: 40%;
