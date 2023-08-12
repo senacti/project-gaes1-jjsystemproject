@@ -2,43 +2,48 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ES=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar Sesion</title>
-    <link rel="stylesheet" href="{{asset ('CSS/FormulariosStyle.css')}}">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{asset ('../bootstrap-5.3.0-dist/css/bootstrap.min.css')}}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{asset ('CSS/login.css')}}">
 </head>
 <body>
-<Section class="contenedorPrincipal">
-    <span class="icon-close">
-    <ion-icon name="close-outline"></ion-icon>
-    </span>
-    <div class = "contenedor-login" >
-        <h1 class="Titulo">Iniciar Sesion</h1>
-          <form method="POST" action="{{ route('login') }}">
-          @csrf
-            <div class="icon-contenedor">
-              <img  src="../../images/FormulariosIMG/login.png" class="icon">
-            </div>  
-              <div class="Datos">
-                <div class="Input-datos-formularios">
-                  <label>Email</label>
-                  <input type="email" class="input" required  id="email" name="email">
-                  <label>Contraseña</label>
-                  <input type="password" class="input" required id="password" name="password">
+<button type="button" class="btn-login btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Iniciar sesion
+      </button>
+    <form method="POST" action="{{ route('login') }}">
+    @csrf
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title " id="exampleModalLabel">JJ.System</h1>
                 </div>
-                <div class="botonC">
-                    <input type="submit" value="Iniciar Sesion" id="iniciarSesion">
-                </div >
-                <div class="recuperar-contraseña">
-                    <a id="recuperarContraseña" href="../formularios/recuperarcontraseña.html">Olvide mi contraseña</a></li>
+                <div class="modal-body">
+                  <div class="Datos-login">
+                    <label for="Correo" name="Correo">Correo</label>
+                    <input type="mail" required>
+                  </div>
+                  <div class="Datos-login">
+                    <label for="Contraseña" name="Constraseña">Contraseña</label>
+                    <input type="password" name="Constraseña">
+                  </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary">Login</button>
                 </div>
-                <div class="login-registrar">
-                  <a id="registrar" href="{{asset ('register')}}">Registrarse</a></li>
+                <div class="modal-footer">
+                  <a href="#">Olvide mi contraseña</a>
+                </div>
+                <div class="modal-footer">
+                  <a href="#">Registrarse</a>
+                </div>
               </div>
               </div>
-        </form>
-      </div>
-  </Section>
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+            </div>
+          </div>
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
 </body>
 </html>
