@@ -1,0 +1,84 @@
+.modal-dialog{
+    background-color: rgba(3, 55, 104, 1);
+    padding: 10px;
+    border-radius: 5px;
+}
+.modal-content{
+    border-color: rgba(3, 55, 104, 1);
+    border-top-right-radius: 300px;
+    border-bottom-right-radius: 250px;
+    border-bottom-left-radius: 250px;
+    background-color: rgba(3, 55, 104, 1);
+
+}
+@font-face {
+    font-family: "Berlin-sans-serif";
+    src: url("../fonts/Berlin-sans-serif.ttf");
+}
+.modal-title{
+    font-family:"Berlin-sans-serif";
+}
+.modal-body{
+    background-color: rgba(217, 217, 217, 1);
+    border-bottom-right-radius: 135px;
+    border-bottom-left-radius: 90px;
+    border-top-right-radius: 200px;
+}
+.Datos-registro{
+    justify-content: center;
+    margin-left: 25%;
+}
+
+.Datos-registro label{
+    display: block;
+    padding: 5px;
+}
+.Datos-registro input{
+   border: none;
+   outline: none;
+   border-bottom: 1.5px solid;
+   border-radius: 3px;
+   background: none;
+   width: 50%;
+}
+.Datos-auto-venta select{
+    width: 50%;
+    border: 2px solid #bbbbbb;
+    background-color: rgba(217, 217, 217, 1);
+}
+
+.btn-cancelar{
+    background-color:rgb(103, 103, 103);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-family:"Teko-Light";
+    margin-left: 25%;
+    width: 100px;
+}
+.btn-registrar{
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-family:"Berlin-sans-serif";
+    width: 100px;
+    margin-top: 10%;
+}
+.cont-footer{
+    margin-top: 10%;
+}
+.modal-footer{
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+.modal-footer a{
+    text-decoration: none;
+    color: black;
+}
+.modal-footer a:hover{
+    color:rgba(1, 138, 190, 1) ;
+    text-decoration: underline;
+} 

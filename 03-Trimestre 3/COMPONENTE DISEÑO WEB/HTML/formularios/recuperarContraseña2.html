@@ -11,23 +11,27 @@
 <body>
     
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            contraseña
+            contraseña2
         </button>
         <form action="">
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                 <div class="modal-body">
-                    <h4 class="modal-title" id="exampleModalLabel">Recuperar contraseña</h4>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Recuperar contraseña</h1>
                     <img>
                     <div class="textContraseña">
-                        <h2 class="subtitulo">¿No recuerdas tu contraseña?</h2></li>
-                        <p class="parrafo"> No te preocupes, estamos trabajando para que recuperes tu contraseña. 
-                            A continuacion ingresa tu correo electronico: </p></li>
+                        <h2 class="titulo">¿No recuerdas tu contraseña?</h2></li>
+                        <p class="parrafo">Hemos enviado un <b>codigo</b> al  correo electronico <b>example01@gmail.com </b> para reestablecer tu contraseña.
+                        </p>
                     </div>
-                    <div class="Datos-registro">
-                        <label for="email">Email</label>
-                        <input type="email" name="email" required>
+                    <div class="numeros-codigo">
+                        <label>Ingresa el codigo</label>
+                        <input type="number" maxlength="1"  required>
+                        <input type="number" maxlength="1"  required>
+                        <input type="number" maxlength="1"  required>
+                        <input type="number" maxlength="1"  required>
+                        <input type="number" maxlength="1"  required>
                     </div>
                     <button type="submit" class="btn-continuar btn-primary">Continuar</button>
                 </div>
