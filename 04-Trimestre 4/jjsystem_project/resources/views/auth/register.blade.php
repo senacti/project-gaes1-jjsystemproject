@@ -40,10 +40,6 @@
                         <input type="password"   id="password" name="password" required>
                     </div>
                     <div class="Datos-registro">
-                        <label  for="password" >Confirmar contraseña</label>
-                        <input type="password"   id="password" name="password" required>
-                    </div>
-                    <div class="Datos-registro">
                         <label for="numeroContacto">Numero de contacto</label>
                         <input type="number" id="numeroContacto " name="numeroContacto " required>
                     </div>

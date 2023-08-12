@@ -55,9 +55,7 @@ class RegisterController extends Controller
             'apellido' => ['required'],
             'email' => ['required'],
             'password' => ['required'],
-            'numeroContacto' => ['required'],
-            
-            
+            'numeroContacto' => ['required']
         ]);
     }
 
