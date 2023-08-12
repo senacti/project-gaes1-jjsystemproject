@@ -21,7 +21,8 @@ use App\Http\Controllers\PqrsfController;
 Route::get('/', function () {
     return view('/layout/welcome');
 });
-
+Route::post('/login', 'Auth\LoginController@login');
+Route::post('/register', 'Auth\RegisterController@register');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

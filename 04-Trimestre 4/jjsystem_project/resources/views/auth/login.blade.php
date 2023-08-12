@@ -30,7 +30,7 @@
                     <input type="password" name="password">
                   </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-primary">Login</button>
+                  <button type="submit" class="btn btn-primary">Login</button>
                 </div>
                 <div class="modal-footer">
                   <a href="#">Olvide mi contraseña</a>
