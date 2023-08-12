@@ -38,15 +38,11 @@ body{
 }
 .Datos-registro input{
    border: none;
+   outline: none;
    border-bottom: 1.5px solid;
    border-radius: 3px;
    background: none;
    width: 50%;
-}
-.Datos-auto-venta select{
-    width: 50%;
-    border: 2px solid #bbbbbb;
-    background-color: rgba(217, 217, 217, 1);
 }
 
 .btn-cancelar{
@@ -92,4 +88,10 @@ body{
     justify-content: center;
     margin-top: 10%;
     margin-left: 40%;
+}
+/*Las lineas de codigo siguiente se encargan de ocultar los botones del input type="number*/
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0;
 }

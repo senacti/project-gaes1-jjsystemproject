@@ -22,12 +22,12 @@
                 </div>
                 <div class="modal-body">
                   <div class="Datos-login">
-                    <label for="Correo" name="Correo">Correo</label>
-                    <input type="mail" required>
+                    <label for="email" >Correo</label>
+                    <input type="email" name="email"required>
                   </div>
                   <div class="Datos-login">
-                    <label for="Contraseña" name="Constraseña">Contraseña</label>
-                    <input type="password" name="Constraseña">
+                    <label for="password">Contraseña</label>
+                    <input type="password" name="password">
                   </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-primary">Login</button>

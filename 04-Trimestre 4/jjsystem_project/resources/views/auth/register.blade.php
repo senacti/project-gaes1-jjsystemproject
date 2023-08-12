@@ -20,20 +20,20 @@
                 <div class="modal-body">
                     <h1 class="modal-title fs-5" id="exampleModalLabel">Registrarse</h1>
                     <div class="Datos-registro">
-                        <label for="NumeroDocumento">Numero de documento</label>
-                        <input type="number" id="NumeroDocumento " name="NumeroDocumento " required>
+                        <label for="numeroDocumento">Numero de documento</label>
+                        <input type="number" id="numeroDocumento " name="numeroDocumento " required>
                     </div>
                     <div class="Datos-registro">
-                        <label for="Nombre">Nombre</label>
-                        <input type="text" id="Nombre" name="Nombre" required>
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" required>
                     </div>
                     <div class="Datos-registro">
-                        <label for="Apellido">Apellido</label>
-                        <input type="text" id="Apellido" name="Apellido" required>
+                        <label for="apellido">Apellido</label>
+                        <input type="text" id="apellido" name="apellido" required>
                     </div>
                     <div class="Datos-registro">
                         <label for="email">Email</label>
-                        <input type="email" name="email*" required>
+                        <input type="email" name="email" required>
                     </div>
                     <div class="Datos-registro">
                         <label  for="password" >Contraseña</label>
@@ -42,6 +42,10 @@
                     <div class="Datos-registro">
                         <label  for="password" >Confirmar contraseña</label>
                         <input type="password"   id="password" name="password" required>
+                    </div>
+                    <div class="Datos-registro">
+                        <label for="numeroContacto">Numero de contacto</label>
+                        <input type="number" id="numeroContacto " name="numeroContacto " required>
                     </div>
                     <div class="cont-footer">
                         <div class="modal-footer">
