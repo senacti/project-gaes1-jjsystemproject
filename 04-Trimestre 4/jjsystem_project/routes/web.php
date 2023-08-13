@@ -19,7 +19,7 @@ use App\Http\Controllers\PqrsfController;
 */
 
 Route::get('/', function () {
-    return view('/layout/welcome');
+    return view('welcome');
 });
 Route::post('/login', 'Auth\LoginController@login');
 Route::post('/register', 'Auth\RegisterController@register');
@@ -102,15 +102,6 @@ Route::get('/registrospqrsf',function(){
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Auth::routes();
 Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-
-
 
 Route::resource('/envios', EnvioController::class);
 

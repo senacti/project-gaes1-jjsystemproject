@@ -21,7 +21,7 @@
                     <h1 class="modal-title fs-5" id="exampleModalLabel">Registrarse</h1>
                     <div class="Datos-registro">
                         <label for="numeroDocumento">Numero de documento</label>
-                        <input type="number" id="numeroDocumento " name="numeroDocumento " required>
+                        <input type="number" id="numeroDocumento" name="numeroDocumento" required>
                     </div>
                     <div class="Datos-registro">
                         <label for="nombre">Nombre</label>
@@ -33,7 +33,7 @@
                     </div>
                     <div class="Datos-registro">
                         <label for="email">Email</label>
-                        <input type="email" name="email" required>
+                        <input type="email" id="email" name="email" required>
                     </div>
                     <div class="Datos-registro">
                         <label  for="password" >Contraseña</label>
@@ -41,7 +41,7 @@
                     </div>
                     <div class="Datos-registro">
                         <label for="numeroContacto">Numero de contacto</label>
-                        <input type="number" id="numeroContacto " name="numeroContacto " required>
+                        <input type="number" id="numeroContacto" name="numeroContacto" required>
                     </div>
                     <div class="cont-footer">
                         <div class="modal-footer">
