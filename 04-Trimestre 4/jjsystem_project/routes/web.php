@@ -30,6 +30,7 @@ Route::get('/Citas/pdf', [citaController::class, 'pdf'])->name('Citas.pdf');
 Route::middleware(['auth'])->group(function(){
     //RUTAS CRUD PRODUCTOS-Y-SERVICIOS
     Route::resource('/Productos', ProductoController::class);
+    Route::delete('/Productos/{id}', 'ProductController@destroy');
     //RUTAS CRUD SERVICIO-TECNICO-CITAS
     Route::resource('/Citas', citaController::class);
     Route::resource('/envios', EnvioController::class);

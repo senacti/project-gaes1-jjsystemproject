@@ -80,14 +80,14 @@
                         <tbody>
                             @foreach($Productos as $Producto)
                             <tr>
-                                <td>{{$Producto->id}}</td>
+                                <td>{{$Producto->idProducto}}</td>
                                 <td>{{$Producto->nombreProducto}}</td>
                                 <td>{{$Producto->descripcionProducto}}</td>
                                 <td>{{$Producto->precioProducto}}</td>
                                 <td>{{$Producto->cantidad}}</td>
-                                <td>{{$Producto->categoriaProducto->nombreCategoria}}</td>
-                                <td>{{$Producto->proveedorProducto->nombreProveedor}}</td>
-                                <td class="icon"><a href="{{url('Productos/'.$Producto->id.'/edit')}}"><img src="{{asset('images/iconos/edit.png')}}" alt="Modificar"></a></td>
+                                <td>{{$Producto->idCategoriaProducto}}</td>
+                                <td>{{$Producto->idProveedorProducto}}</td>
+                                <td class="icon"><a href="{{url('Productos/'.$Producto->id.'edit')}}"><img src="{{asset('images/iconos/edit.png')}}" alt="Modificar"></a></td>
                                 <td>
                                     <form action="{{url('Productos/'.$Producto->id)}}" method="POST">
                                         @method("DELETE")
