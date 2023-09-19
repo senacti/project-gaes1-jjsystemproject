@@ -1,3 +1,5 @@
+@auth
+    @if (Auth::User()->idRol == 1)
 <!doctype html>
 <html lang="es">
 <head>
@@ -27,7 +29,7 @@
                     <h3>Servicio <br> Técnico</h3>
                 </button>
             </a>
-            <a href="">
+            <a href="{{asset('envios')}}">
                 <button class="btn shipments">
                     <h3>Envios</h3>
                 </button>
@@ -60,3 +62,5 @@
     </div>
 </body>
 </html>
+@endif
+@endauth

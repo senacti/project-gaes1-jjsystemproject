@@ -17,10 +17,10 @@ use App\Http\Controllers\PqrsfController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
 Route::get('/', function () {
-    return view('welcome');
+    return view("Index");
 });
+
 Route::post('/login', 'Auth\LoginController@login');
 Route::post('/register', 'Auth\RegisterController@register');
 Auth::routes();
@@ -34,10 +34,6 @@ Route::middleware(['auth'])->group(function(){
     Route::resource('/Citas', citaController::class);
     Route::resource('/envios', EnvioController::class);
     Route::get('export', [ExportController::class, 'export'])->name('export');
-});
-
-Route::get('/Index', function () {
-    return view("Index");
 });
 
 Route::get('/venta_productos', function () {

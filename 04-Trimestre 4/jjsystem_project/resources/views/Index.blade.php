@@ -17,8 +17,8 @@
       <p><b> J.J SYSTEM </b></p>
     </div>
     <div class="registro"> 
-      <a href="../../HTML/formularios/registro.html"><h3><b> Registrarse </b></h3></a>
-      <a href="../../HTML/formularios/login.html"><h3><b> Inciar sesión </b></h3></a>
+      <a href="{{asset('register')}}"><h3><b> Registrarse </b></h3></a>
+      <a href="{{asset('login')}}"><h3><b> Inciar sesión </b></h3></a>
       <i class="fa fa-user-circle-o" aria-hidden="true"></i>
     </div>
   </div>  

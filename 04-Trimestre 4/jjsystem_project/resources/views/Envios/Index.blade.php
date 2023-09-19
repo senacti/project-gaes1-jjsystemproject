@@ -1,3 +1,5 @@
+@auth
+    @if (Auth::User()->idRol == 1)
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,15 +54,15 @@
                     </div>
                 </nav>
 
-                <div id="content">
-                        <div class="container">
+                <div id="content" style="margin-top:30px ">
+                        <div class="container" style="margin-left:30px ">
                             <div class="row">
                                 <div class="col-lg-9 allowed_prod">
                                     <h2 class="font-weight-bold">ENVIOS: </h2>
                                 </div>
                             </div>
                         </div>
-                    <section class="search_prod">
+                    <section style="padding: 30px;">
                         <form class="form-inline position-relative my-2 d-inline-block">
                             <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
                             <button class="btn btn-search position-absolute" type="submit"><img class="btn-search-img" src="../../images/lupa.png" alt="Lupa de busqueda"></i></button>
@@ -108,3 +110,5 @@
 
 </body>
 </html>
+@endif
+@endauth
