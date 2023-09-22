@@ -10,16 +10,16 @@
                 <h2 class="text-light font-weight-bold">J.J System</h2>
             </div>
                 <div class="menu">
-                    <a href="{{asset('home_admin')}}" class="d-block text-light font-weight-light">Inicio</a>
-                    <a href="#" class="d-block text-light font-weight-light">Productos y Servicios</a>
+                    <a href="{{asset('home')}}" class="d-block text-light font-weight-light">Inicio</a>
+                    <a href="{{asset('gestion_productos')}}" class="d-block text-light font-weight-light">Productos y Servicios</a>
                     <div class="a-selected">
                         <a href="#" class="d-block text-light font-weight-light">Servicio Tecnico</a>
                     </div> 
-                    <a href="#" class="d-block text-light font-weight-light">Envios</a>
-                    <a href="#" class="d-block text-light font-weight-light">PQRSF</a>
-                    <a href="#" class="d-block text-light font-weight-light">Clientes</a>
-                    <a href="#" class="d-block text-light font-weight-light">Tecnicos</a>
-                    <a href="#" class="d-block text-light font-weight-light">Ajustes</a>
+                    <a href="{{asset('envios')}}" class="d-block text-light font-weight-light">Envios</a>
+                    <a href="{{asset('home')}}" class="d-block text-light font-weight-light">PQRSF</a>
+                    <a href="{{asset('home')}}" class="d-block text-light font-weight-light">Clientes</a>
+                    <a href="{{asset('home')}}" class="d-block text-light font-weight-light">Tecnicos</a>
+                    <a href="{{asset('home')}}" class="d-block text-light font-weight-light">Ajustes</a>
                 </div>
             </div>
             

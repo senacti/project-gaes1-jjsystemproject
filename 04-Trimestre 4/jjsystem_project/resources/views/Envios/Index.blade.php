@@ -21,16 +21,16 @@
                 <h2 class="text-light font-weight-bold">J.J System</h2>
             </div>
                 <div class="menu">
-                    <a href="#" class="d-block text-light font-weight-light">Inicio</a>
-                    <a href="#" class="d-block text-light font-weight-light">Productos y Servicios</a>                   
-                    <a href="#" class="d-block text-light font-weight-light">Servicio Tecnico</a>
+                    <a href="{{asset('home')}}" class="d-block text-light font-weight-light">Inicio</a>
+                    <a href="{{asset('gestion_productos')}}" class="d-block text-light font-weight-light">Productos y Servicios</a>                   
+                    <a href="{{asset('Citas.indexST')}}" class="d-block text-light font-weight-light">Servicio Tecnico</a>
                     <div class="a-selected">
                         <a href="#" class="d-block text-light font-weight-light">Envios</a>
                     </div>
-                    <a href="#" class="d-block text-light font-weight-light">PQRSF</a>
-                    <a href="#" class="d-block text-light font-weight-light">Clientes</a>
-                    <a href="#" class="d-block text-light font-weight-light">Tecnicos</a>
-                    <a href="#" class="d-block text-light font-weight-light">Ajustes</a>
+                    <a href="{{asset('home')}}" class="d-block text-light font-weight-light">PQRSF</a>
+                    <a href="{{asset('home')}}" class="d-block text-light font-weight-light">Clientes</a>
+                    <a href="{{asset('home')}}" class="d-block text-light font-weight-light">Tecnicos</a>
+                    <a href="{{asset('home')}}" class="d-block text-light font-weight-light">Ajustes</a>
                 </div>
             </div>
             
@@ -47,11 +47,15 @@
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="#">Mi perfil</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Cerrar sesión</a>
+                                <a class="dropdown-item href="{{route('logout')}}" onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">Cerrar sesión</a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>        
                             </div>
                             </li>
                         </ul>
-                    </div>
+                        </div>
                 </nav>
 
                 <div id="content" style="margin-top:30px ">
@@ -107,7 +111,11 @@
                 </div>
             </div>
         </div>
-
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
 @endif
