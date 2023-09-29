@@ -1,5 +1,3 @@
-@auth
-    @if (Auth::User()->idRol == 1)
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,6 +13,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" >
 </head>
 <body>
+@auth
+    @if (Auth::User()->idRol == 1)
 <div class="d-flex">
         <div id="sidebar-container" class="bg-primary">
             <div class="logo">
@@ -116,7 +116,15 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    @else
+        <div class="alert alert-warning"> 
+            No tienes permisos para ver este contenido. Por favor, contáctate con el administrador si necesitas acceso.
+        </div> 
+    @endif
+@else
+    <div class="alert alert-info">
+        Para ver este contenido, por favor <a href="{{ route('login') }}">inicia sesión</a> o <a href="{{ route('register') }}">regístrate</a>.
+    </div>
+@endauth
 </body>
 </html>
-@endif
-@endauth
