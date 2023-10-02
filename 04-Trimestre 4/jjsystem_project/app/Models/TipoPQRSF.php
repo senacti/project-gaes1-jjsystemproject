@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class TipoPQRSF extends Model
 {
-    protected $table = 'TipoPQRSF';
+    protected $table = 'tipopqrsf';
     protected $primaryKey = 'idTipoPQRSF';
 }

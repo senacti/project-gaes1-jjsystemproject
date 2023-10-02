@@ -2,11 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\estadoPQRSF;
 use App\Models\Pqrsf;
 use App\Models\TipoPQRSF;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
 class PqrsfController extends Controller
 {
@@ -15,15 +13,8 @@ class PqrsfController extends Controller
      */
     public function index()
     {
-
-        $pqrsf = Pqrsf::all(); 
-        //$tipos = TipoPQRSF::all();
-        $tipos = TipoPQRSF::pluck('nombreTipoPQRSF', 'idTipoPQRSF')->all();
-        return view('Pqrsf.create', compact('tipos', 'pqrsf'));
-
-       // $tipos = DB::select('SELECT * FROM estadoPQRSF');
-      //  $estados = DB::select('SELECT * FROM TipoPQRSF');
-      //  return view('Pqrsf/create', compact('tipos', 'estados', 'pqrsf'));
+        $pqrsf = Pqrsf::all();
+        return view('pqrsf.index', ['pqrsf' => $pqrsf]);
     }
 
     /**
@@ -31,11 +22,8 @@ class PqrsfController extends Controller
      */
     public function create()
     {
-        $pqrsfs = Pqrsf::all(); 
         $tipos = TipoPQRSF::all();
-        $estados = estadoPQRSF::all();
-
-        return view('Pqrsf.create', compact('tipos', 'estados', 'pqrsfs'));
+        return view('pqrsf.create', ['tipos' => $tipos]);
     }
 
     /**
@@ -43,20 +31,19 @@ class PqrsfController extends Controller
      */
     public function store(Request $request)
     {
-
         $request->validate([
             'fechaPQRSF' => 'required',
-            'informacionPQRSF' => 'required',
-            'TipoPQRSF_idTipoPQRSF' => 'required'
-        ]);
+            'tipoPQRSF' => 'required',
+            'informacionPQRSF' => 'required', 
+        ]); 
 
         $pqrsf = new Pqrsf();
-        $pqrsf ->fechaPQRSF = $request->input('fechaPQRSF');
-        $pqrsf ->informacionPQRSF = $request->input('informacionPQRSF');
-        $pqrsf->TipoPQRSF_idTipoPQRSF = $request->input('TipoPQRSF_idTipoPQRSF');     
-        $pqrsf ->save();
-        
-        return view("Pqrsf.message", [ 'msg' => "Registro guardado"]);
+        $pqrsf->fechaPQRSF = $request->input('fechaPQRSF');
+        $pqrsf->tipoPQRSF_idTipoPqrsf = $request->input('tipoPQRSF');
+        $pqrsf->informacionPQRSF = $request->input('informacionPQRSF');
+        $pqrsf->save();
+
+        return view("pqrsf.message", ['msg' => "Registro guardado"]);
     }
 
     /**
@@ -72,8 +59,8 @@ class PqrsfController extends Controller
      */
     public function edit($idPQRSF)
     {
-        $Pqrsf = Pqrsf::find($idPQRSF);
-        return view('Pqrsf.edit', ['Pqrsf' => $Pqrsf, 'estados' => estadoPQRSF::all()]);
+        $pqrsf = Pqrsf::find($idPQRSF);
+        return view('Pqrsf.edit', ['pqrsf' => $pqrsf, 'tipos' => TipoPQRSF::all()]);  
     }
 
     /**
@@ -82,23 +69,18 @@ class PqrsfController extends Controller
     public function update(Request $request, $idPQRSF)
     {
         $request->validate([
-            
             'fechaPQRSF' => 'required',
-            'informacionPQRSF' => 'required',
-            'idCliente' => 'required',
-            'TipoPQRSF_idTipoPQRSF' => 'required',
-            'EstadoPQRSF_idEstadoPQRSF' => 'required'
-        ]);
+            'tipoPQRSF' => 'required',
+            'informacionPQRSF' => 'required', 
+        ]); 
 
         $pqrsf = Pqrsf::find($idPQRSF);
-        $pqrsf ->fechaPQRSF = $request->input('fechaPQRSF');
-        $pqrsf ->informacionPQRSF = $request->input('informacionPQRSF');
-        $pqrsf ->Cliente_idCliente = $request->input('Cliente_idCliente');
-        $pqrsf ->TipoPQRSF_idTipoPQRSF = $request->input('TipoPQRSF');
-        $pqrsf ->EstadoPQRSF_idEstadoPQRSF = $request->input('estadoPQRSF');
-        $pqrsf ->save();
+        $pqrsf->fechaPQRSF = $request->input('fechaPQRSF');
+        $pqrsf->tipoPQRSF_idTipoPqrsf = $request->input('tipoPQRSF');
+        $pqrsf->informacionPQRSF = $request->input('informacionPQRSF');
+        $pqrsf->save();
 
-        return view("Pqrsf.message", [ 'msg' => "Registro editado"]);
+        return view("pqrsf.message", ['msg' => "Registro modificado"]);
     }
 
     /**
@@ -106,9 +88,9 @@ class PqrsfController extends Controller
      */
     public function destroy($idPQRSF)
     {
-        $Pqrsf = Pqrsf::find($idPQRSF);
-        $Pqrsf->delete();
+        $pqrsf = Pqrsf::find($idPQRSF);
+        $pqrsf->delete();
 
-        return redirect("Pqrsf");    
+        return redirect("pqrsf");
     }
 }

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Editar PQRSF - J.J System</title>
+    <title>Editar PQRSF - J.J System</title>
     <link rel="stylesheet" href="{{asset('CSS/formulariopqrsf.css')}}">
     <link rel="stylesheet" href="{{asset('CSS/normalize.css')}}">
     <link rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" href="{{asset('https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css')}}">
@@ -98,51 +98,38 @@
 
             @endif
 
-            <form action="{{ url('Pqrsf/' .$pqrsf->idPQRSF) }}" method="post">
+            <form action="{{ url('pqrsf/' .$pqrsf->idPQRSF) }}" method="post">
                 @method("PUT")
+
                 @csrf
 
               <div class="mb-3">
                 <label for="fechaPQRSF" class="form-label"> Fecha</label>
-                <input type="date" class="form-control" id="fechaPQRSF" value="{{ $Pqrsf->fechaPQRSF }}" Required>
+                <input type="date" class="form-control" id="fechaPQRSF" value="{{ $pqrsf->fechaPQRSF) }}" required>
               </div>
       
+                  <div class="mb-3 row">
+                    <label for="TipoPQRSF" class="col-sm-2 col-form-label">Tipo Pqrsf</label>
+                    <div class="col-sm-5">
+                        <select name="TipoPQRSF_idTipoPQRSF" class="form-select" aria-label="Default select example" required>
+                            <option value="">Seleccionar el tipo</option>
+                            @foreach($tipos as $tipoPQRSF)
+                                <option value="{{ $tipoPQRSF -> idTipoPqrsf }}" @if ($tipoPQRSF -> idTipoPqrsf == $pqrsf-> TipoPQRSF_idTipoPQRSF) {{'selected'}} @endif>{{ $tipoPQRSF -> nombreTipoPQRSF }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                </div>
+                
               <br><div class="mb-3">
                   <label for="informacionPQRSF" class="form-label"> Información Pqrsf <br>
                        Si lo considera necesario, por favor especifique servicio, productos y/o personas involucradas.</label>
                   <textarea class="form-control" id="informacionPQRSF" rows="3"></textarea>
                 </div>
 
-                <div class="mb-3 row">
-                    <label for="TipoPQRSF" class="col-sm-2 col-form-label">Tipo Pqrsf</label>
-                    <div class="col-sm-5">
-                        <select name="TipoPQRSF" class="form-select" aria-label="Default select example">
-                            @isset($tipos)
-                                @foreach($tipos as $TipoPQRSF)
-                                    <option value="{{$TipoPQRSF->idTipoPQRSF}}">{{$TipoPQRSF->nombreTipoPQRSF}}</option>
-                                @endforeach
-                            @endisset
-                        </select>
-                    </div>
-                </div>    
+    <a href="{{ url('pqrsf') }}" class="btn btn-secondary">Regresar</a>
+    <button type="submit" class="btn btn-success">Guardar</button>
 
-                <div class="mb-3 row">
-                    <label for="estadoPQRSF" class="col-sm-2 col-form-label">Estado Pqrsf</label>
-                    <div class="col-sm-5">
-                        <select name="estadoPQRSF" class="form-select" aria-label="Default select example">
-                            @isset($estados)
-                                @foreach($estados as $estadoPQRSF)
-                                    <option value="{{$estadoPQRSF->idEstadoPQRSF}}">{{$estadoPQRSF->nombreEstadoPQRSF}}</option>
-                                @endforeach
-                            @endisset
-                        </select>
-                    </div>
-                </div>
-           
-    <a href="{{ url('Pqrsf/create') }}" class="btn btn-secondary">Regresar</a>
-    <a href="{{ url('Pqrsf/registrospqrsf') }}" class="btn btn-secondary">Guardar</a>
-
-</form>
+    </form>
         </div>
     </main>
 

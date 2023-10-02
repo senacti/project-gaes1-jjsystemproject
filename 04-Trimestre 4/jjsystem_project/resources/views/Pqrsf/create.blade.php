@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario PQRSF - J.J System</title>
+    <title>Registrar PQRSF - J.J System</title>
     <link rel="stylesheet" href="{{asset('CSS/formulariopqrsf.css')}}">
     <link rel="stylesheet" href="{{asset('CSS/normalize.css')}}">
     <link rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" href="{{asset('https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css')}}">
@@ -98,24 +98,23 @@
 
             @endif
 
-            <form action="{{ url('Pqrsf')}}" method="post">
+            <form action="{{ url('Pqrsf') }}" method="post">
 
                 @csrf
 
               <div class="mb-3">
                 <label for="fechaPQRSF" class="form-label"> Fecha</label>
-                <input type="date" class="form-control" id="fechaPQRSF" value="{{ old ('fechaPQRSF')}}" Required>
+                <input type="date" class="form-control" id="fechaPQRSF" value="{{ old('fechaPQRSF') }}" required>
               </div>
       
                   <div class="mb-3 row">
                     <label for="TipoPQRSF" class="col-sm-2 col-form-label">Tipo Pqrsf</label>
                     <div class="col-sm-5">
-                        <select name="TipoPQRSF_idTipoPQRSF" class="form-select" aria-label="Default select example">
-                            @isset($tipos)
-                            @foreach($tipos as $idTipoPQRSF => $nombreTipoPQRSF)
-                                <option value="{{$idTipoPQRSF}}">{{$nombreTipoPQRSF}}</option>
-                                @endforeach
-                            @endisset
+                        <select name="TipoPQRSF_idTipoPQRSF" class="form-select" aria-label="Default select example" required>
+                            <option value="">Seleccionar el tipo</option>
+                            @foreach($tipos as $tipoPQRSF)
+                                <option value="{{ $tipoPQRSF -> idTipoPqrsf}}">{{ $tipoPQRSF -> nombreTipoPQRSF}}</option>
+                            @endforeach
                         </select>
                     </div>
                 </div>
@@ -126,8 +125,8 @@
                   <textarea class="form-control" id="informacionPQRSF" rows="3"></textarea>
                 </div>
 
-    <a href="{{ url('pqrsf/index') }}" class="btn btn-secondary">Regresar</a>
-    <button type="submit" class="btn btn-success"> Guardar </button>
+    <a href="{{ url('pqrsf') }}" class="btn btn-secondary">Regresar</a>
+    <button type="submit" class="btn btn-success">Guardar</button>
 
     </form>
         </div>

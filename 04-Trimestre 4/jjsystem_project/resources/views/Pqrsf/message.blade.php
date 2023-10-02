@@ -10,7 +10,7 @@
     <div class="container py-4">
         <h2>{{ $msg }}</h2>
 
-        <a href="{{ url('Pqrsf')}}" class="btn btn-secondary ">Regresar</a>
+        <a href="{{ url('pqrsf') }}" class="btn btn-secondary">Regresar</a>
     </div>
 </body>
 </html>

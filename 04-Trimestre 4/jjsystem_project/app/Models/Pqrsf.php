@@ -8,17 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Pqrsf extends Model
 {
     public $timestamps = false;
-    protected $table = 'pqrsf';
-    protected $primaryKey = 'idPQRSF';
+    protected $table = 'Pqrsf';
+    protected $primaryKey = 'idPQRSF  ';
 
-    public function estadoPQRSF()
-    {
-        return $this->belongsTo(estadoPQRSF::class, 'idEstadoPQRSF', 'id');
-    }
-
-    public function tipoPQRSF()
+    public function tipoPqrsf()
     {
         return $this->belongsTo(TipoPQRSF::class, 'TipoPQRSF_idTipoPQRSF');
     }
-
 }

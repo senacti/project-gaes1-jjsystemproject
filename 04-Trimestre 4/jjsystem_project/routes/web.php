@@ -91,11 +91,9 @@ Route::get('/visualizacionPqrsf',function(){
     return view("visualizacionPqrsf");
 });
 
-Route::get('/registrospqrsf',function(){
-    return view("registrospqrsf");
+Route::get('/registrospqrsf', function () {
+    return view("Pqrsf.index");
 });
-
-
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -116,14 +114,7 @@ Route::resource('/envios', EnvioController::class);
 
 Route::get('export', [ExportController::class, 'export'])->name('export');
 
+
 //RUTAS CRUD PQRSF
 
-Route::resource('Pqrsf/registrospqrsf', PqrsfController::class);
-
-Route::get('/Pqrsf/create',function(){
-    return view("Pqrsf/create");
-});
-
-Route::get('/pqrsf',function(){
-    return view("Pqrsf/index");
-});
+Route::resource('/pqrsf', PqrsfController::class);
