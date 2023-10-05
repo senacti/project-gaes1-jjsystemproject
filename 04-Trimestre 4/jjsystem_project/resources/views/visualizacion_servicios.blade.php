@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Camaras - J.J System</title>
+    <title>Servicios - J.J System</title>
     <link href="{{asset("CSS/visualizacion_servicios.css")}}" rel="stylesheet">
     <link href="{{asset("CSS/normalize.css")}}" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,13 +19,13 @@
         
         <div class="container logo-login-container">
             
-            <a href="{{asset ('Index')}}" class="logo">J.J SYSTEM</a>
+            <a href="{{asset('Index')}}" class="logo">J.J SYSTEM</a>
             
             <nav class="login_navigation">
                 <ul>
-                    <li><a href="../../HTML/formularios/registro.html">Registrarse</a></li>
-                    <li><a href="../../HTML/formularios/login.html">Iniciar sesión</a></li>
-                    <li><a href="#"><img class="user_img" src="../../images/ft perfil.png" alt="Foto de perfil"></a></li>
+                    <li><a href="{{asset('register')}}">Registrarse</a></li>
+                    <li><a href="{{asset('login')}}">Iniciar sesión</a></li>
+                    <li><a href="{{asset('login')}}"><img class="user_img" src="{{asset('images/fotoperfil.png')}}" alt="Foto de perfil"></a></li>
                 </ul>
                 
             </nav>
@@ -54,11 +54,11 @@
                 
                 <ul>
                     <li>
-                        <a href="#">Servicios</a>
+                        <a href="{{asset("visualizacion_servicios")}}">Servicios</a>
                     </li>
                     
                     <li>
-                        <a href="#">Sobre nosotros</a>
+                        <a href="{{asset("Index")}}">Sobre nosotros</a>
                     </li>
                     
                     <li>
@@ -116,7 +116,7 @@
             </div>
             
             <button>
-                    <a href="#"><h2>Requiero un análisis</h2></a>
+                    <a href="{{asset('servicio_analisis')}}"><h2>Requiero un análisis</h2></a>
             </button>
         
         </div>
@@ -140,7 +140,7 @@
             </div>    
             
             <button>
-                    <a href="#"><h2>Requiero un mantenimiento</h2></a>
+                    <a href="{{asset('servicio_mantenimiento')}}"><h2>Requiero un mantenimiento</h2></a>
             </button>
         
         </div>

@@ -28,7 +28,7 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/Citas/pdf', [citaController::class, 'pdf'])->name('Citas.pdf');
 Route::middleware(['auth'])->group(function(){
-    //RUTAS CRUD PRODUCTOS-Y-SERVICIOS
+    //RUTAS CRUD PRODUCTOS
     Route::resource('/Productos', ProductoController::class);
     Route::delete('/Productos/{id}', 'ProductController@destroy');
     //RUTAS CRUD SERVICIO-TECNICO-CITAS
@@ -52,7 +52,22 @@ Route::get('/visualizacion_producto', function () {
 Route::get('/cotizacion', function () {
     return view("cotizacion");
 });
+
+
 //servicio Tecnico
+
+Route::get('/visualizacion_servicios', function () {
+    return view("visualizacion_servicios");
+});
+
+Route::get('/servicio_analisis', function () {
+    return view("servicio_analisis");
+});
+
+Route::get('/servicio_mantenimiento', function () {
+    return view("servicio_mantenimiento");
+});
+
 Route::get('/Citas.indexST',function(){
     return view("Citas.indexST");
 });
