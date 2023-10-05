@@ -1,13 +1,10 @@
 @auth
     @if (Auth::User()->idRol == 1)
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registrar Envio</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<body>
+@extends('layout/template')
+
+@section('title','Citas')
+
+@section('contenido')
     <main>
         <div class="container py-4">
             <h2> Registrar Envio </h2>
@@ -54,7 +51,13 @@
             </form>
         </div>
     </main>
-</body>
-</html>
-@endif
+    @else
+        <div class="alert alert-warning"> 
+            No tienes permisos para ver este contenido. Por favor, contáctate con el administrador si necesitas acceso.
+        </div> 
+    @endif
+@else
+    <div class="alert alert-info">
+        Para ver este contenido, por favor <a href="{{ route('login') }}">inicia sesión</a> o <a href="{{ route('register') }}">regístrate</a>.
+    </div>
 @endauth
