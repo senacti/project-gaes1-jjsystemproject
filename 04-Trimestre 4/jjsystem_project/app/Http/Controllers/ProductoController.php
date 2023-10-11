@@ -25,8 +25,13 @@ class ProductoController extends Controller
     {
         $categoriaProductos = categoriaProducto::all();
         $proveedorProductos = proveedorProducto::all();
-        return view('Productos.create', ['categoriaProductos' => $categoriaProductos], ['proveedorProductos' => $proveedorProductos]);
+        
+        return view('Productos.create', [
+            'categoriaProductos' => $categoriaProductos,
+            'proveedorProductos' => $proveedorProductos
+        ]);
     }
+    
 
     /**
      * Store a newly created resource in storage.

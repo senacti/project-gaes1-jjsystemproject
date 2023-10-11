@@ -1,3 +1,5 @@
+@auth
+    @if (Auth::User()->idRol == 1)
 @extends('layout/template')
 
 @section('title','Citas')
@@ -10,21 +12,21 @@
                 <h2 class="text-light font-weight-bold">J.J System</h2>
             </div>
                 <div class="menu">
-                    <a href="{{asset('home_admin')}}" class="d-block text-light font-weight-light">Inicio</a>
-                    <a href="#" class="d-block text-light font-weight-light">Productos y Servicios</a>
+                    <a href="{{asset('home')}}" class="d-block text-light font-weight-light">Inicio</a>
+                    <a href="{{asset('gestion_productos')}}" class="d-block text-light font-weight-light">Productos y Servicios</a>
                     <div class="a-selected">
                         <a href="#" class="d-block text-light font-weight-light">Servicio Tecnico</a>
                     </div> 
-                    <a href="#" class="d-block text-light font-weight-light">Envios</a>
-                    <a href="#" class="d-block text-light font-weight-light">PQRSF</a>
-                    <a href="#" class="d-block text-light font-weight-light">Clientes</a>
-                    <a href="#" class="d-block text-light font-weight-light">Tecnicos</a>
-                    <a href="#" class="d-block text-light font-weight-light">Ajustes</a>
+                    <a href="{{asset('envios')}}" class="d-block text-light font-weight-light">Envios</a>
+                    <a href="{{asset('home')}}" class="d-block text-light font-weight-light">PQRSF</a>
+                    <a href="{{asset('home')}}" class="d-block text-light font-weight-light">Clientes</a>
+                    <a href="{{asset('home')}}" class="d-block text-light font-weight-light">Tecnicos</a>
+                    <a href="{{asset('home')}}" class="d-block text-light font-weight-light">Ajustes</a>
                 </div>
             </div>
             
             <div class="w-100">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
                         <h4 class="greetings">Hola, Yoanny</h4>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ml-auto profile">
@@ -36,7 +38,11 @@
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="#">Mi perfil</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Cerrar sesión</a>
+                                <a class="dropdown-item href="{{route('logout')}}" onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">Cerrar sesión</a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>        
                             </div>
                             </li>
                         </ul>
@@ -93,3 +99,13 @@
                 </div>
             </div>
         </div>
+    @else
+        <div class="alert alert-warning"> 
+            No tienes permisos para ver este contenido. Por favor, contáctate con el administrador si necesitas acceso.
+        </div> 
+    @endif
+@else
+    <div class="alert alert-info">
+        Para ver este contenido, por favor <a href="{{ route('login') }}">inicia sesión</a> o <a href="{{ route('register') }}">regístrate</a>.
+    </div>
+@endauth

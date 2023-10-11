@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class categoriaProducto extends Model
 {
-    protected $table = 'categoriaProductos';
+    protected $table = 'categoriaproductos';
+    protected $primaryKey = 'idCategoriaProducto';
 }

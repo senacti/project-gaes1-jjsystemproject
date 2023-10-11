@@ -66,7 +66,7 @@
 
             <form action="{{ url('Productos')}}" method="POST">
                 
-                @csrf
+                @csrf   
 
                 <div class="form-group">
                     <div class="form-title">

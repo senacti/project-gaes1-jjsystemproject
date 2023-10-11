@@ -1,3 +1,5 @@
+@auth
+    @if (Auth::User()->idRol == 1)
 <!doctype html>
 <html lang="es">
 <head>
@@ -23,16 +25,16 @@
                 <h2 class="text-light font-weight-bold">J.J System</h2>
             </div>
                 <div class="menu">
-                    <a href="{{asset('home_admin')}}" class="d-block text-light font-weight-light">Inicio</a>
+                    <a href="{{asset('home')}}" class="d-block text-light font-weight-light">Inicio</a>
                     <div class="a-selected">
                         <a href="{{asset('gestion_productos')}}" class="d-block text-light font-weight-light">Productos y Servicios</a>
                     </div>                    
-                    <a href="#" class="d-block text-light font-weight-light">Servicio Tecnico</a>
-                    <a href="#" class="d-block text-light font-weight-light">Envios</a>
-                    <a href="#" class="d-block text-light font-weight-light">PQRSF</a>
-                    <a href="#" class="d-block text-light font-weight-light">Clientes</a>
-                    <a href="#" class="d-block text-light font-weight-light">Tecnicos</a>
-                    <a href="#" class="d-block text-light font-weight-light">Ajustes</a>
+                    <a href="{{asset('Citas.indexST')}}" class="d-block text-light font-weight-light">Servicio Tecnico</a>
+                    <a href="{{asset('envios')}}" class="d-block text-light font-weight-light">Envios</a>
+                    <a href="{{asset('gestion_productos')}}" class="d-block text-light font-weight-light">PQRSF</a>
+                    <a href="{{asset('gestion_productos')}}" class="d-block text-light font-weight-light">Clientes</a>
+                    <a href="{{asset('gestion_productos')}}" class="d-block text-light font-weight-light">Tecnicos</a>
+                    <a href="{{asset('gestion_productos')}}" class="d-block text-light font-weight-light">Ajustes</a>
                 </div>
             </div>
             
@@ -162,3 +164,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
+@endif
+@endauth

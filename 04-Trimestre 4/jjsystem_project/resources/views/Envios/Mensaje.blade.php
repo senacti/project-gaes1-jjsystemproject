@@ -1,4 +1,5 @@
-
+@auth
+    @if (Auth::User()->idRol == 1)
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,3 +16,5 @@
     </div>
 </body>
 </html>
+@endif
+@endauth
