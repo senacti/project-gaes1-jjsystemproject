@@ -108,7 +108,7 @@ nav{
     padding: 0;
     margin-left: 2rem;
     padding-top: 0rem;
-    position: absolute;
+    position: relative;
     width: 100%;
 }
 
